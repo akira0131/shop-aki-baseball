@@ -1,16 +1,21 @@
 <?php
+/* ================== Homepage ================== */
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
+Route::auth();
+
+/* ================== Access Uploaded Files ================== */
+Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Admin Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| This route group applies the "web" middleware group to every route
+| it contains. The "web" middleware group is defined in your HTTP
+| kernel and includes session state, CSRF protection, and more.
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+require __DIR__.'/admin_routes.php';
