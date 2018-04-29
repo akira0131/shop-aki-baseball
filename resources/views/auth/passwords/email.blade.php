@@ -1,4 +1,4 @@
-@extends('la.layouts.auth')
+@extends('auth.app')
 
 @section('htmlheader_title')
     パスワード recovery
@@ -6,67 +6,53 @@
 
 @section('content')
 
-<body class="login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>{{ config('laraadmin.sitename2')[0] }} </b>{{ config('laraadmin.sitename2')[1] }}</a>
-        </div><!-- /.login-logo -->
+    {{-- ログインロゴ --}}
+    @component('components.login_field')
+        @slot('field', 'login-logo')
+    @endcomponent
 
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-        @endif
+    @if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+    @endif
 
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <strong>あれっ！</strong> どうやら入力がおかしいようです。<br><br>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+    @if (count($errors) > 0)
+    <div class="alert alert-danger">
+        {!! trans('message.somproblems') !!}<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 
-        <div class="login-box-body">
-            <p class="login-box-msg">Reset パスワード</p>
-            <form action="{{ url('/password/email') }}" method="post">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}"/>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+    <div class="login-box-body">
+        <p class="login-box-msg">{{ trans('message.resetPassword') }}</p>
+        <form action="{{ url('/password/email') }}" method="post">
+            
+            {{-- トークン --}}
+            @component('components.login_field')
+                @slot('field', 'csrf-token')
+            @endcomponent
+
+            {{-- メールアドレス入力欄(送信用) --}}
+            @component('components.login_field')
+                @slot('field', 'send-mailadress-field')
+            @endcomponent
+
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.resetPasswordLink') }}</button>
                 </div>
-
-                <div class="row">
-                    <div class="col-xs-2">
-                    </div><!-- /.col -->
-                    <div class="col-xs-8">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Send パスワード Reset Link</button>
-                    </div><!-- /.col -->
-                    <div class="col-xs-2">
-                    </div><!-- /.col -->
-                </div>
-            </form>
-
-            <a href="{{ url('/login') }}">Log in</a><br>
-            <!--<a href="{{ url('/register') }}" class="text-center">登録 a new membership</a>-->
-
-        </div><!-- /.login-box-body -->
-
-    </div><!-- /.login-box -->
-
-    @include('la.layouts.partials.scripts_auth')
-
-    <script>
-        $(function () {
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_square-blue',
-                radioClass: 'iradio_square-blue',
-                increaseArea: '20%' // optional
-            });
-        });
-    </script>
-</body>
-
+                <div class="col-xs-2"></div>
+            </div>
+        </form>
+    </div>
 @endsection
+
+@component('components.js')
+    @slot('screen', 'auth')
+@endcomponent
