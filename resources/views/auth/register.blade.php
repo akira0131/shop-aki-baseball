@@ -1,70 +1,80 @@
-@extends('la.layouts.auth')
+@extends('auth.app')
 
 @section('htmlheader_title')
     登録
 @endsection
 
+@section('body-tag', 'hold-transition')
+
 @section('content')
 
-    <body class="hold-transition register-page">
-    <div class="register-box">
-        <div class="register-logo">
-            <a href="{{ url('/home') }}"><b>{{ config('laraadmin.sitename2')[0] }} </b>{{ config('laraadmin.sitename2')[1] }}</a>
-        </div>
+    <div class="register-logo">
+        <a href="{{ url('/home') }}"><b>{{ config('laraadmin.sitename2')[0] }} </b>{{ config('laraadmin.sitename2')[1] }}</a>
+    </div>
 
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <strong>あれっ！</strong> どうやら入力がおかしいようです。<br><br>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+    @if (count($errors) > 0)
+    <div class="alert alert-danger">
+        {!! trans('message.somproblems') !!}<br><br>
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
+
+    <div class="register-box-body">
+        <p class="login-box-msg">登録 Super Admin</p>
+        <form action="{{ url('/register') }}" method="post">
+
+            {{-- トークン --}}
+            @component('components.login_field')
+                @slot('field', 'csrf_token')
+            @endcomponent
+
+            {{-- 表示名入力欄 --}}
+            @component('components.login_field')
+                @slot('field', 'show_user_name')
+            @endcomponent
+
+            {{-- メールアドレス入力欄(送信用) --}}
+            @component('components.login_field')
+                @slot('field', 'send_mailadress_field')
+            @endcomponent
+
+            {{-- パスワード入力欄 --}}
+            @component('components.login_field')
+                @slot('field', 'password_field')
+            @endcomponent
+
+            {{-- パスワード入力欄(確認) --}}
+            @component('components.login_field')
+                @slot('field', 'confirm_password_field')
+            @endcomponent
+
+            <div class="row">
+                
+                {{--  --}}
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+                            <input type="checkbox"> I agree to the terms
+                        </label>
+                    </div>
+                </div>
+
+                {{--  --}}
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">登録</button>
+                </div>
             </div>
-        @endif
+        </form>
+    </div>
 
-        <div class="register-box-body">
-            <p class="login-box-msg">登録 Super Admin</p>
-            <form action="{{ url('/register') }}" method="post">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="Full name" name="name" value="{{ old('name') }}"/>
-                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}"/>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="パスワード" name="password"/>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Retype password" name="password_confirmation"/>
-                    <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                </div>
-                <div class="row">
-                    <div class="col-xs-8">
-                        <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox"> I agree to the terms
-                            </label>
-                        </div>
-                    </div><!-- /.col -->
-                    <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">登録</button>
-                    </div><!-- /.col -->
-                </div>
-            </form>
+@endsection
 
-            @include('auth.partials.social_login')
-            <hr>
-            <center><a href="{{ url('/login') }}" class="text-center">Login</a></center>
-        </div><!-- /.form-box -->
-    </div><!-- /.register-box -->
-
-    @include('la.layouts.partials.scripts_auth')
-
+@section('js')
+    <script src="{{ asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
     <script>
         $(function () {
             $('input').iCheck({
@@ -74,6 +84,4 @@
             });
         });
     </script>
-</body>
-
 @endsection

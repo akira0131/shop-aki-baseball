@@ -1,0 +1,143 @@
+
+nav[aria-label="ナビゲーションバー"] {
+    border-bottom: 1px solid #000000;
+    
+    .navbar-nav > .nav-link {
+        border-left: 1px solid #000000;
+        border-right: 1px solid #000000;
+    }
+
+    .navbar-nav > .nav-item {
+        border-left: 1px solid #000000;
+        border-right: 1px solid #000000;
+    }
+}
+
+div[aria-label="検索フォーム"] {
+    margin:0;
+    margin-top: 0px;
+    padding: 0;
+ 
+    form.form-inline > form-control {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    form.form-inline > form-control:forcus + button {
+        z-index: 3;
+    }
+
+    form.form-inline > button {
+        border: 0;
+        background: none;
+        
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+    
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+}
+
+
+
+
+
+.navbar-light {
+  //color: #fff;
+  //background-color: #ccc6c6;
+  //border-color: #aca1a2;
+}
+
+.navbar-light .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav > .dropdown > a .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navbar-light .navbar-brand {
+  //color: #fff;
+}
+
+.menu-large {
+  position: static !important;
+}
+
+.megamenu {
+  padding: 20px 20px;
+  width: 100%;
+}
+
+.megamenu > div > li > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.megamenu > div > li > ul > li {
+  list-style: none;
+}
+
+.megamenu .card {
+    outline: none;
+}
+
+.megamenu .card:hover,
+.megamenu .card:focus {
+    outline: 1px solid #000;
+}
+
+.megamenu > div > li > ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: normal;
+}
+
+.megamenu > div > li > ul > li > a:hover,
+.megamenu > div > li > ul > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+
+.megamenu.disabled > a,
+.megamenu.disabled > a:hover,
+.megamenu.disabled > a:focus {
+  color: #999999;
+}
+
+.megamenu.disabled > a:hover,
+.megamenu.disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  //filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+  cursor: not-allowed;
+}
+
+.megamenu.dropdown-header {
+  color: #428bca;
+  font-size: 18px;
+}
+

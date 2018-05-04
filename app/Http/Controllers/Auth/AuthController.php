@@ -8,8 +8,8 @@ use App\Role;
 use Validator;
 use Eloquent;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+//use Illuminate\Foundation\Auth\ThrottlesLogins;
+//use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
@@ -24,7 +24,7 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    //use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
      * ログイン／ユーザー登録後にユーザーがリダイレクトする場所
@@ -40,7 +40,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        //$this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
     
     public function showRegistrationForm()
@@ -59,7 +59,7 @@ class AuthController extends Controller
         if($userCount == 0) {
             return redirect('register');
         } else {
-            return view('auth.login');
+            return view('auth.index');
         }
     }
 

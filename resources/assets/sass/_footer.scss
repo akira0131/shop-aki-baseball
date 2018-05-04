@@ -1,0 +1,18 @@
+
+footer[aria-label="フッター"] {
+    background: white;
+    color:grey;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .container > .d-flex > .list-unstyled {
+        padding-right:5px;
+        padding-left:10px;
+        margin: 0px;
+    }
+
+    .container > .d-flex > .nav > .nav-item > .nav-link {
+        padding: 0;
+    }
+}

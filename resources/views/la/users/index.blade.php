@@ -1,4 +1,4 @@
-@extends("la.layouts.app")
+@extends("dashboard.app")
 
 @section("contentheader_title", "Users")
 @section("contentheader_description", "users listing")

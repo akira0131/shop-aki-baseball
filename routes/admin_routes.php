@@ -5,6 +5,7 @@ $as = "";
     $as = config('laraadmin.adminRoute').'.';
     
     // Routes for Laravel 5.3
+    Route::get('login', 'Auth\AuthController@showLoginForm');
     Route::get('/logout', 'Auth\LoginController@logout');
 //}
 
