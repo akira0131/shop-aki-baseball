@@ -33,6 +33,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('la.dashboard');
+        return view('dashboard.index');
     }
 }

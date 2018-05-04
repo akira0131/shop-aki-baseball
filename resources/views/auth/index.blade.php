@@ -30,21 +30,20 @@
 
             {{-- トークン --}}
             @component('components.login_field')
-                @slot('field', 'csrf-token')
+                @slot('field', 'csrf_token')
             @endcomponent
 
             {{-- メールアドレス入力欄(サインイン用) --}}
             @component('components.login_field')
-                @slot('field', 'sigin-mailaddress-field')
+                @slot('field', 'sigin_mailaddress_field')
             @endcomponent
 
             {{-- パスワード入力欄 --}}
             @component('components.login_field')
-                @slot('field', 'password-field')
+                @slot('field', 'password_field')
             @endcomponent
 
             <div class="row">
-                <!-- サインイン情報キャッシュボタン -->
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
@@ -52,7 +51,6 @@
                         </label>
                     </div>
                 </div>
-                <!-- サインインボタン -->
                 <div class="col-xs-4">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.siginButton') }}</button>
                 </div>
@@ -61,7 +59,7 @@
 
         {{-- SNS認証リンク --}}
         @component('components.login_field')
-            @slot('field', 'social-login-link')
+            @slot('field', 'social_login_link')
         @endcomponent
 
         <a href="{{ url('/password/reset') }}">{{ trans('message.forgotPassword') }}</a><br>
@@ -69,6 +67,15 @@
     </div>
 @endsection
 
-@component('components.js')
-    @slot('screen', 'auth')
-@endcomponent
+@section('js')
+    <script src="{{ asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
+@endsection

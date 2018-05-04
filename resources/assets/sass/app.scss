@@ -1,2 +1,11 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Variables
+@import "variables";
+
+// Custom CSS for application
+@import "layout";           /* レイアウト */
+@import "header";           /* ヘッダー */
+@import "navbar";           /* ナビゲーションバー */
+@import "sidebar";          /* サイドバー */
+@import "contents";         /* コンテンツ */
+@import "footer";           /* フッター */

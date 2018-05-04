@@ -5,7 +5,7 @@
  * アプリケーション構築の素晴らしいスタート地点となるでしょう。
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
 window.Vue = require('vue');
 

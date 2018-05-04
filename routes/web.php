@@ -19,3 +19,17 @@ Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');
 */
 
 require __DIR__.'/admin_routes.php';
+
+/*
+|--------------------------------------------------------------------------
+| 素材ページ
+|--------------------------------------------------------------------------
+|
+| 
+| 
+| 
+|
+*/
+Route::get('/sample/content_1', function () {
+    return view('sample.content_1.index');
+});
