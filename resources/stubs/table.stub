@@ -1,0 +1,23 @@
+<?php
+
+namespace DummyNamespace;
+
+use Orchid\Platform\Layouts\Table;
+use Orchid\Platform\Platform\Fields\TD;
+
+class DummyClass extends Table
+{
+
+    /**
+     * @var string
+     */
+    public $data = '';
+
+    /**
+     * @return array
+     */
+    public function fields(): array
+    {
+        return [];
+    }
+}

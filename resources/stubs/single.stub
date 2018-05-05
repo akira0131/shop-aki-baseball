@@ -1,0 +1,61 @@
+<?php
+
+namespace DummyNamespace;
+
+use Orchid\Platform\Fields\Field;
+use Orchid\Platform\Behaviors\Single;
+use Orchid\Platform\Http\Forms\Posts\UploadPostForm;
+
+class DummyClass extends Single
+{
+    /**
+     * @var string
+     */
+    public $name = '';
+
+    /**
+     * @var string
+     */
+    public $description = '';
+
+    /**
+     * @var string
+     */
+    public $slug = '';
+
+    /**
+     * Slug url /news/{name}.
+     *
+     * @var string
+     */
+    public $slugFields = '';
+
+    /**
+     * Rules Validation.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        return [];
+    }
+
+    /**
+     * @return array
+     */
+    public function fields() : array
+    {
+        return [];
+    }
+
+    /**
+     * @return array
+     * @throws \Orchid\Platform\Exceptions\TypeException
+     */
+    public function modules() : array
+    {
+        return [
+            UploadPostForm::class,
+        ];
+    }
+}

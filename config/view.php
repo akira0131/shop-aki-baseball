@@ -4,12 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | ビュー保存パス
+    | View Storage Paths
     |--------------------------------------------------------------------------
     |
-    | テンプレートシステムではディスクからテンプレートをロードします。
-    | この配列でビューを検索するパスを指定してください。もちろん
-    | Laravelが通常使用するパスは設定済みです。
+    | Most templating systems load templates from disk. Here you may specify
+    | an array of paths that should be checked for your views. Of course
+    | the usual Laravel view path has already been registered for you.
     |
     */
 
@@ -19,12 +19,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | コンパイル済みビューパス
+    | Compiled View Path
     |--------------------------------------------------------------------------
     |
-    | このオプションにはアプリケーションのコンパイル済みBlade
-    | テンプレートの保存場所を指定します。通常、この値はstorageディレクトリーの
-    | 中になるでしょう。しかし、他と同様、お好きな値に変更してください。
+    | This option determines where all the compiled Blade templates will be
+    | stored for your application. Typically, this is within the storage
+    | directory. However, as usual, you are free to change this value.
     |
     */
 

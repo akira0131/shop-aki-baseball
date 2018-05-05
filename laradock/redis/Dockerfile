@@ -6,6 +6,15 @@ LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 #RUN mkdir -p /usr/local/etc/redis
 #COPY redis.conf /usr/local/etc/redis/redis.conf
 
+#####################################
+# Set Timezone
+#####################################
+
+ARG TZ
+ENV TZ ${TZ}
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 VOLUME /data
 
 EXPOSE 6379

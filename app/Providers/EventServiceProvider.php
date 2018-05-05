@@ -8,7 +8,7 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 class EventServiceProvider extends ServiceProvider
 {
     /**
-     * アプリケーションのイベントリスナーのマップ
+     * The event listener mappings for the application.
      *
      * @var array
      */
@@ -19,7 +19,7 @@ class EventServiceProvider extends ServiceProvider
     ];
 
     /**
-     * アプリケーションのイベント登録
+     * Register any events for your application.
      *
      * @return void
      */

@@ -1,22 +1,10 @@
-
 /**
- * 最初にこのプロジェクトのJavascriptの依存パッケージを全てロードします。
- * これはVueと他のライブラリも含まれます。堅牢でパワフルな
- * アプリケーション構築の素晴らしいスタート地点となるでしょう。
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
  */
 
-// require('./bootstrap');
+window.Turbolinks = require('turbolinks');
+Turbolinks.start();
 
-window.Vue = require('vue');
-
-/**
- * 次に、真新しいVueアプリケーションのインスタンスを生成し、
- * ページヘアタッチします。それから、このアプリケーションにコンポーネントを追加するか
- * 皆さんの要求に合わせて、JacaScriptのスカフォールドをカスタマイズしてください。
- */
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+require('./bootstrap');

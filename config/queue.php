@@ -7,8 +7,8 @@ return [
     | Default Queue Connection Name
     |--------------------------------------------------------------------------
     |
-    | LaravelキューAPIは同じAPIを使用して様々なバックエンドが使用できるよう
-    | 統一されたAPIをサポートしています。ここではデフォルトキュードライバーを
+    | Laravel's queue API supports an assortment of back-ends via a single
+    | API, giving you convenient access to each back-end using the same
     | syntax for every one. Here you may define a default connection.
     |
     */
@@ -17,12 +17,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | キュー接続
+    | Queue Connections
     |--------------------------------------------------------------------------
     |
-    | ここでアプリケーションが使用するそれぞれのサーバーに対する接続情報を
-    | 設定します。それぞれのバックエンドのデフォルト接続はLaravelに最初から
-    | 設定されています。自由に追加してください。
+    | Here you may configure the connection information for each server that
+    | is used by your application. A default configuration has been added
+    | for each back-end shipped with Laravel. You are free to add more.
     |
     | Drivers: "sync", "database", "beanstalkd", "sqs", "redis", "null"
     |
@@ -69,12 +69,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 失敗したキュージョブ
+    | Failed Queue Jobs
     |--------------------------------------------------------------------------
     |
-    | このオプションでは失敗したキュージョブをログする振る舞いを設定します。
-    | どのデータベースとテーブルを保存に使用するかをコントロールできます。
-    | お好きなデータベース／テーブルに変更して下さい。
+    | These options configure the behavior of failed queue job logging so you
+    | can control which database and table are used to store the jobs that
+    | have failed. You may change them to any database / table you wish.
     |
     */
 

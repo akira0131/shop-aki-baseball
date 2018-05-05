@@ -8,7 +8,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 class AuthServiceProvider extends ServiceProvider
 {
     /**
-     * アプリケーションのためにマップ付けるポリシー
+     * The policy mappings for the application.
      *
      * @var array
      */
@@ -17,7 +17,7 @@ class AuthServiceProvider extends ServiceProvider
     ];
 
     /**
-     * 認証／認可サービスの登録
+     * Register any authentication / authorization services.
      *
      * @return void
      */

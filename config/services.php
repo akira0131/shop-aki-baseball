@@ -4,13 +4,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | サードパーティーサービス
+    | Third Party Services
     |--------------------------------------------------------------------------
     |
-    | このファイルは、Stripe、Mailgun、Mandrillなどのサードパーティーサービスの
+    | This file is for storing the credentials for third party services such
     | as Stripe, Mailgun, SparkPost and others. This file provides a sane
-    | 様々な認証情報をパッケージから簡単に見つけられるように、この主のタイプの
-    | 情報をまとめておくデフォルトの場所を用意するのは、筋が通っているでしょう。
+    | default location for this type of information, allowing packages
+    | to have a conventional place to find your various credentials.
     |
     */
 

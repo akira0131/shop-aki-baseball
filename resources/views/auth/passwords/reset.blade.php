@@ -1,85 +1,66 @@
-@extends('auth.app')
-
-@section('htmlheader_title')
-    パスワード reset
-@endsection
+@extends('dashboard::layouts.auth')
 
 @section('content')
 
-    {{-- ログインロゴ --}}
-    @component('components.login_field')
-        @slot('field', 'login_logo')
-    @endcomponent
 
-    @if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-    @endif
 
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-        {!! trans('message.somproblems') !!}<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+    <p class="m-t-lg">Reset Password</p>
 
-    <div class="login-box-body">
-        <p class="login-box-msg">Reset パスワード</p>
-        <form action="{{ url('/password/reset') }}" method="post">
 
-            {{-- CSRFトークン --}}
-            @component('components.login_field')
-                @slot('field', 'csrf_token')
-            @endcomponent
+    <form class="m-t-md" role="form" method="POST"
+          action="{{ route('dashboard.password.email') }}">
+        @csrf
 
-            {{-- トークン --}}
-            @component('components.login_field')
-                @slot('field', 'token')
-            @endcomponent
+        <input type="hidden" name="token" value="{{ $token }}">
 
-            {{-- メールアドレス入力欄(送信用) --}}
-            @component('components.login_field')
-                @slot('field', 'send_mailadress_field')
-            @endcomponent
 
-            {{-- パスワード入力欄 --}}
-            @component('components.login_field')
-                @slot('field', 'password_field')
-            @endcomponent
+        <div class="form-group form-group-default {{ $errors->has('email') ? ' has-error' : '' }}">
+            <label>Email</label>
+            <div class="controls">
+                <input type="email" name="email" placeholder="{{trans('dashboard::auth/account.enter_email')}}"
+                       class="form-control" required
+                       value="{{ old('email') }}">
 
-            {{-- パスワード入力欄(確認) --}}
-            @component('components.login_field')
-                @slot('field', 'confirm_password_field')
-            @endcomponent
-
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-8">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Reset password</button>
-                </div>
-                <div class="col-xs-2"></div>
+                @if ($errors->has('email'))
+                    <span class="form-text text-muted">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
             </div>
-        </form>
+        </div>
 
-        <a href="{{ url('/login') }}">Log in</a><br>
-    </div>
-    
-@endsection
+        <div class="form-group form-group-default {{ $errors->has('password') ? ' has-error' : '' }}">
+            <label>Password</label>
+            <div class="controls">
+                <input type="password" name="password" placeholder="Password"
+                       class="form-control" required>
 
-@section('js')
-    <script src="{{ asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
-    <script>
-        $(function () {
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_square-blue',
-                radioClass: 'iradio_square-blue',
-                increaseArea: '20%' // optional
-            });
-        });
-    </script>
+                @if ($errors->has('Password'))
+                    <span class="form-text text-muted">
+                        <strong>{{ $errors->first('Password') }}</strong>
+                    </span>
+                @endif
+            </div>
+        </div>
+
+        <div class="form-group form-group-default {{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+            <label>Confirm Password</label>
+            <div class="controls">
+                <input type="password" name="password_confirmation" placeholder="Confirm Password"
+                       class="form-control" required>
+
+                @if ($errors->has('password_confirmation'))
+                    <span class="form-text text-muted">
+                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                    </span>
+                @endif
+            </div>
+        </div>
+
+
+        <button class="btn btn-default btn-block m-t-md" type="submit">
+            <i class="icon-refresh text-xs m-r-xs"></i> Reset Password
+        </button>
+    </form>
+
 @endsection

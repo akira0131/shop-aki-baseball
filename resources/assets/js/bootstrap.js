@@ -1,56 +1,72 @@
+window.$ = window.jQuery = require('jquery');
 
-window._ = require('lodash');
-window.Popper = require('popper.js').default;
+window.Vue = require('vue');
+
+require('jquery-ui-bundle');
+
+window.Popper = require('popper.js');
+
+require('bootstrap');
+require('bootstrap-tagsinput');
+
+document.addEventListener('turbolinks:load', function() {
+  $("input[data-role='tagsinput']").tagsinput('refresh');
+});
 
 /**
- * モーダルやタブのような基本的なBootstrap機能をサポートしている
- * jQueryとBootstrap jQueryプラグインをロードします。このコードは
- * アプリケーション独自の必要に応じて、変更されることになります。
- */
-
-try {
-    window.$ = window.jQuery = require('jquery');
-
-    require('bootstrap');
-} catch (e) {}
-
-/**
- * Laravelのバックエンドにリクエストを簡単に発行できるように、axios HTTP
- * ライブラリをロードします。このライブラリは自動的に"XSRF"トークン
- * クッキーの値に基づいて、ヘッダーベースのCSRFトークンを送ります。
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
 window.axios = require('axios');
-
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
+require('./modules/csrf_token');
 
-let token = document.head.querySelector('meta[name="csrf-token"]');
+window.Dropzone = require('dropzone');
+Dropzone.autoDiscover = false;
 
-if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
+require('nestable');
 
-/**
- * Echoはチャンネルを購入したり、Laravelによりブロードキャストされるイベントをリスニング
- * するための、記述的なAPIを提供しています。Echoとイベントブロードキャストにより、
- * あなたのチームは堅牢なリアルタイムWebアプリを簡単に構築できるでしょう。
- */
+window.moment = require('moment');
 
-// import Echo from 'laravel-echo'
+$.fn.datetimepicker = require('./modules/bootstrap-datetimepicker.js');
 
-// window.Pusher = require('pusher-js');
+require('./modules/select');
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
+window.Inputmask = require('inputmask');
+
+require('../../../node_modules/select2/dist/js/select2.full.min');
+$(() => {
+  $('.select2-enable').select2({
+    theme: 'bootstrap',
+  });
+});
+
+$.fn.select2.defaults.set('theme', 'bootstrap');
+require('croppie');
+
+require('./dashboard');
+require('./modules/datetimepicker');
+require('./modules/leftMenu');
+require('./modules/open-click');
+require('./modules/inputmask');
+
+window.Chart = require('../../../node_modules/frappe-charts/dist/frappe-charts.min.cjs');
+
+//Code editor
+window.ace = require('brace');
+require('brace/mode/javascript');
+require('brace/theme/monokai');
+
+//Tinymce editor
+require('../../../node_modules/tinymce/tinymce.min');
+tinyMCE.baseURL = '/orchid/js/tinymce';
+
+//SimpleMDE editor
+window.SimpleMDE = require('../../../node_modules/simplemde/dist/simplemde.min.js');
+
+require('./components/attachment.js');
+require('./components/filemanager.js');
+require('./components/menu.js');

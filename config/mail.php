@@ -4,14 +4,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | メールドライバー
+    | Mail Driver
     |--------------------------------------------------------------------------
     |
-    | メール送信のドライバーとしてSMTPとPHPの"mail"機能の二つをLaravelは
-    | サポートしています。アプリケーション全体で使用する方法を選び指定して
-    | ください。デフォルトではSMTPメールをセットしています。
+    | Laravel supports both SMTP and PHP's "mail" function as drivers for the
+    | sending of e-mail. You may specify which one you're using throughout
+    | your application here. By default, Laravel is setup for SMTP mail.
     |
-    | サポートドライバー: "smtp", "sendmail", "mailgun", "mandrill", "ses",
+    | Supported: "smtp", "sendmail", "mailgun", "mandrill", "ses",
     |            "sparkpost", "log", "array"
     |
     */
@@ -20,12 +20,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTPホストアドレス
+    | SMTP Host Address
     |--------------------------------------------------------------------------
     |
-    | アプリケーションで使用するSMTPサーバーのホストアドレスを指定します。
-    | デフォルトでは確実な配信サービスを提供しているMailgunメールサービス
-    | を使用するオプションを設定しています。
+    | Here you may provide the host address of the SMTP server used by your
+    | applications. A default option is provided that is compatible with
+    | the Mailgun mail service which will provide reliable deliveries.
     |
     */
 
@@ -33,12 +33,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTPホストポート
+    | SMTP Host Port
     |--------------------------------------------------------------------------
     |
-    | これはアプリケーションのユーザーにメールを送信するために使用される
-    | SMTPポートです。デフォルトでは、ホストと同様に、Mailgunメール
-    | アプリケーション向けに設定しています。
+    | This is the SMTP port used by your application to deliver e-mails to
+    | users of the application. Like the host we have set this value to
+    | stay compatible with the Mailgun e-mail application by default.
     |
     */
 
@@ -46,12 +46,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | グローバルな「送信元」アドレス
+    | Global "From" Address
     |--------------------------------------------------------------------------
     |
-    | メールの送信元は全部同じメールアドレスに設定したいと思うはずです。
-    | アプリケーションから送信される全メールの送信元名とアドレスはここで
-    | 設定します。
+    | You may wish for all e-mails sent by your application to be sent from
+    | the same address. Here, you may specify a name and address that is
+    | used globally for all e-mails that are sent by your application.
     |
     */
 
@@ -62,12 +62,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    |  メール暗号化プロトコル
+    | E-Mail Encryption Protocol
     |--------------------------------------------------------------------------
     |
-    | アプリケーションがメールでメッセージを送信する時に使用されるべき
-    | 暗号化プロトコルをここで指定します。とても安全なトランスポート層の
-    | 暗号化プロトコルがデフォルトとして設定されています。
+    | Here you may specify the encryption protocol that should be used when
+    | the application send e-mail messages. A sensible default using the
+    | transport layer security protocol should provide great security.
     |
     */
 
@@ -75,12 +75,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTPサーバーユーザー名
+    | SMTP Server Username
     |--------------------------------------------------------------------------
     |
-    | もしSMTPサーバーが認証でユーザー名を必要としているのでしたら、
-    | ここで設定してください。サーバーに接続する時の認証に使用されます。
-    | 更に"password"も、次のオプションで設定できます。
+    | If your SMTP server requires a username for authentication, you should
+    | set it here. This will get used to authenticate with your server on
+    | connection. You may also set the "password" value below this one.
     |
     */
 
@@ -90,12 +90,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Sendmailシステムパス
+    | Sendmail System Path
     |--------------------------------------------------------------------------
     |
-    | メールの送信に"sendmail"ドライバーを使用する場合、このサーバーで
-    | どこにSendmailがあるのか知る必要があります。ここで指定している
-    | デフォルトのパスはほとんどのシステムで上手く動作します。
+    | When using the "sendmail" driver to send e-mails, we will need to know
+    | the path to where Sendmail lives on this server. A default path has
+    | been provided here, which will work well on most of your systems.
     |
     */
 
@@ -103,12 +103,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Markdownメール設定
+    | Markdown Mail Settings
     |--------------------------------------------------------------------------
     |
-    | Markdownベースのメールレンダリングを使用するなら、テーマと
-    | コンポーネントパスをここに設定します。これにより、メールのデザインをカスタマイズ
-    | できます。もしくは、シンプルにLaravelのデフォルトを使用しましょう！
+    | If you are using Markdown based email rendering, you may configure your
+    | theme and component paths here, allowing you to customize the design
+    | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
 

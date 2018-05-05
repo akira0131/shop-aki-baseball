@@ -4,12 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | デフォルトブロードキャスター
+    | Default Broadcaster
     |--------------------------------------------------------------------------
     |
-    | このオプションはイベントをブロードキャストする必要がある場合に
-    | 使用されるデフォルトをコントロールします。下の"connections"
-    | 配列で定義されている接続から選択してください。
+    | This option controls the default broadcaster that will be used by the
+    | framework when an event needs to be broadcast. You may set this to
+    | any of the connections defined in the "connections" array below.
     |
     | Supported: "pusher", "redis", "log", "null"
     |
@@ -19,12 +19,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | ブロードキャスト接続
+    | Broadcast Connections
     |--------------------------------------------------------------------------
     |
-    | 他のシステムやWebsocketを利用しブロードキャストイベントを
-    | 使用する場合の全ブロードキャスト接続をここで定義します。
-    | 使用可能な接続タイプのサンプルをこの配列の中に用意してあります。
+    | Here you may define all of the broadcast connections that will be used
+    | to broadcast events to other systems or over websockets. Samples of
+    | each available type of connection are provided inside this array.
     |
     */
 

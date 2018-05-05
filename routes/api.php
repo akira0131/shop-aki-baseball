@@ -4,12 +4,12 @@ use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
-| APIルート
+| API Routes
 |--------------------------------------------------------------------------
 |
-| ここでアプリケーションのAPIルートを登録します。これらの
-| ルートはRouteServiceProviderによりロードされ、"api"ミドルウェア
-| グループにアサインされます。API構築を楽しんでください！
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
 |
 */
 

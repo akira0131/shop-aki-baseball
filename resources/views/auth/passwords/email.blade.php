@@ -1,67 +1,41 @@
-@extends('auth.app')
+@extends('dashboard::layouts.auth')
 
-@section('htmlheader_title')
-    パスワード recovery
-@endsection
-
+<!-- Main Content  -->
 @section('content')
 
-    {{-- ログインロゴ --}}
-    @component('components.login_field')
-        @slot('field', 'login_logo')
-    @endcomponent
+    <p class="m-t-lg">Reset Password</p>
 
     @if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
     @endif
 
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-        {!! trans('message.somproblems') !!}<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+    <form class="m-t-md" role="form" method="POST"
+          action="{{ route('dashboard.password.email') }}">
+        @csrf
 
-    <div class="login-box-body">
-        <p class="login-box-msg">{{ trans('message.resetPassword') }}</p>
-        <form action="{{ url('/password/email') }}" method="post">
-            
-            {{-- CSRFトークン --}}
-            @component('components.login_field')
-                @slot('field', 'csrf_token')
-            @endcomponent
 
-            {{-- メールアドレス入力欄(送信用) --}}
-            @component('components.login_field')
-                @slot('field', 'send_mailadress_field')
-            @endcomponent
+        <div class="form-group form-group-default {{ $errors->has('email') ? ' has-error' : '' }}">
+            <label>Email</label>
+            <div class="controls">
+                <input type="email" name="email" placeholder="{{trans('dashboard::auth/account.enter_email')}}"
+                       class="form-control" required
+                       value="{{ old('email') }}">
 
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-8">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.resetPasswordLink') }}</button>
-                </div>
-                <div class="col-xs-2"></div>
+                @if ($errors->has('email'))
+                    <span class="form-text text-muted">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                @endif
             </div>
-        </form>
-    </div>
-@endsection
+        </div>
 
-@section('js')
-    <script src="{{ asset('/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
-    <script>
-        $(function () {
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_square-blue',
-                radioClass: 'iradio_square-blue',
-                increaseArea: '20%' // optional
-            });
-        });
-    </script>
+
+
+        <button class="btn btn-default btn-block m-t-md" type="submit">
+            <i class="icon-envelope text-xs m-r-xs"></i> Send Password Reset Link
+        </button>
+    </form>
+
 @endsection

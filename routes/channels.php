@@ -2,12 +2,12 @@
 
 /*
 |--------------------------------------------------------------------------
-| ブロードキャストチャンネル
+| Broadcast Channels
 |--------------------------------------------------------------------------
 |
-| ここで、アプリケーションでサポートする、全てのイベントブロードキャスト
-| チャンネルを登録してください。指定されたチャンネルの認可コールバックにより、
-| 認証済みユーザがそのチャンネルをリッスンする許可を持っているかチェックされます。
+| Here you may register all of the event broadcasting channels that your
+| application supports. The given channel authorization callbacks are
+| used to check if an authenticated user can listen to the channel.
 |
 */
 
