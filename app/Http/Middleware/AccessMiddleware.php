@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Http\Middleware;
+namespace App\Http\Middleware;
 
 use Closure;
 use Carbon\Carbon;

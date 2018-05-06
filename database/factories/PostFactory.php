@@ -22,7 +22,7 @@ $factory->define(Post::class, function (Faker $faker) {
 
     $user = User::inRandomOrder()->first()->id;
 
-    //$type		= 	 $faker->randomElement(["page","demo"]);
+    //$type        =      $faker->randomElement(["page","demo"]);
     $type = $faker->randomElement(['demo']);
 
     $status = ['publish'];

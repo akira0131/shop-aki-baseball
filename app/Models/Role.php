@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
+use App\Access\RoleAccess;
+use App\Access\RoleInterface;
+use App\Traits\FilterTrait;
 
-use Orchid\Platform\Access\RoleAccess;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Platform\Access\RoleInterface;
-use Orchid\Platform\Core\Traits\FilterTrait;
 
 class Role extends Model implements RoleInterface
 {

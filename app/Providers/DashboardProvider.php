@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Providers;
 
-namespace Orchid\Platform\Providers;
+use App\Kernel\Dashboard;
+use App\Fields\FieldStorage;
+use App\Behaviors\Storage\ManyBehaviorStorage;
+use App\Behaviors\Storage\SingleBehaviorStorage;
 
-use Orchid\Platform\Kernel\Dashboard;
 use Illuminate\Support\ServiceProvider;
-use Orchid\Platform\Fields\FieldStorage;
-use Orchid\Platform\Behaviors\Storage\ManyBehaviorStorage;
-use Orchid\Platform\Behaviors\Storage\SingleBehaviorStorage;
 
 class DashboardProvider extends ServiceProvider
 {

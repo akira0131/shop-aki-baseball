@@ -11,7 +11,7 @@ return [
     | internally. You may choose one of them according to your PHP
     | configuration. By default PHP's "GD Library" implementation is used.
     |
-    | Supported: "gd", "imagick"
+    | サポートドライバー: "gd", "imagick"
     |
     */
 

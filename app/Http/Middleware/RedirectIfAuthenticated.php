@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class RedirectIfAuthenticated
 {
     /**
-     * Handle an incoming request.
+     * 送られてきたリクエストの処理
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
@@ -17,8 +17,9 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
+        // ログインチェック後の移動先ページ
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            return redirect('/dashboard');
         }
 
         return $next($request);

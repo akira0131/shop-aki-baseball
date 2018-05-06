@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Widget;
+namespace App\Widget;
 
 class Widget implements WidgetContractInterface
 {

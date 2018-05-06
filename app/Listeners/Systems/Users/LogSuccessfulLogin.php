@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Listeners\Systems\Users;
+namespace App\Listeners\Systems\Users;
 
 use Illuminate\Auth\Events\Login;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
+// ログイン成功時のリスナークラス
 class LogSuccessfulLogin implements ShouldQueue
 {
     use InteractsWithQueue;

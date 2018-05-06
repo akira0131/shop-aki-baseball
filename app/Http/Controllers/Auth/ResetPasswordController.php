@@ -9,48 +9,31 @@ class ResetPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Controller
+    | パスワードリセットコントローラ
     |--------------------------------------------------------------------------
     |
-    | This controller is responsible for handling password reset requests
-    | and uses a simple trait to include this behavior. You're free to
-    | explore this trait and override any methods you wish to tweak.
+    | このコントローラはパスワードリセットリクエストの処理に責任を持ち、その
+    | 振る舞いを取り込むために、シンプルなトレイトを使用しています。望み通りに
+    | 調整するため、このトレイトを使い、メソッドをオーバーライドしてください。
     |
     */
 
     use ResetsPasswords;
 
     /**
-     * Where to redirect users after resetting their password.
+     * パスワードをリセットした後のユーザリダイレクト先
      *
      * @var string
      */
     protected $redirectTo = '/home';
 
     /**
-     * Create a new controller instance.
+     * 新しいコントローラインスタンスの生成
      *
      * @return void
      */
     public function __construct()
     {
-        $this->redirectTo = config('platform.prefix');
-        
         $this->middleware('guest');
-    }
-
-    /**
-     * Display the password reset view for the given token.
-     *
-     * If no token is present, display the link request form.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param string|null              $token
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
-     */
-    public function showResetForm(Request $request, $token = null)
-    {
-        return view('dashboard::auth.passwords.reset')->with(['token' => $token, 'email' => $request->email]);
     }
 }

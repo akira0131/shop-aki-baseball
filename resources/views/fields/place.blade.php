@@ -3,16 +3,16 @@
         @if(isset($title))
             <label for="field-{{$slug}}">{{$title}}</label>
         @endif
-		@php
-			if(isset($prefix)) 
-				$inputname=$prefix.'['.$lang.']'.$name;
-			else $inputname=$name.$lang;
+        @php
+            if(isset($prefix)) 
+                $inputname=$prefix.'['.$lang.']'.$name;
+            else $inputname=$name.$lang;
 
-			if(isset($value['name'])) 
-				$valuename=$value['name']; 
-			else $valuename=$value;
+            if(isset($value['name'])) 
+                $valuename=$value['name']; 
+            else $valuename=$value;
         @endphp
-		
+        
         <div class="input-group">
             <input class="form-control {{$class or ''}}" id="place-{{$slug}}-{{$lang}}"
                    name="{{$inputname}}[name]" value="{{$valuename or ''}}"
@@ -20,7 +20,7 @@
             <input type="hidden" id="lat-{{$slug}}-{{$lang}}" name="{{$inputname}}[lat]"
                    value="{{$value['lat'] or ''}}">
             <input type="hidden" id="lng-{{$slug}}-{{$lang}}" name="{{$inputname}}[lng]"
-                   value="{{$value['lng'] or ''}}">				   
+                   value="{{$value['lng'] or ''}}">                   
             <span class="input-group-btn">
             <button class="btn btn-default" type="button" data-toggle="modal"
                     data-target="#map-place-{{$slug}}-{{$lang}}"><i

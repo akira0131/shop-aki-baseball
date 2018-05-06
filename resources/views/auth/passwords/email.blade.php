@@ -3,7 +3,7 @@
 <!-- Main Content  -->
 @section('content')
 
-    <p class="m-t-lg">Reset Password</p>
+    <p class="m-t-lg">Reset パスワード</p>
 
     @if (session('status'))
         <div class="alert alert-success">
@@ -34,7 +34,7 @@
 
 
         <button class="btn btn-default btn-block m-t-md" type="submit">
-            <i class="icon-envelope text-xs m-r-xs"></i> Send Password Reset Link
+            <i class="icon-envelope text-xs m-r-xs"></i> Send パスワード Reset Link
         </button>
     </form>
 

@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Composers;
 
-namespace Orchid\Platform\Http\Composers;
-
-use Orchid\Platform\Kernel\Dashboard;
+use App\Kernel\Dashboard;
 
 class MenuComposer
 {

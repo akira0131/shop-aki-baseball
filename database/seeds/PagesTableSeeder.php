@@ -8,7 +8,7 @@ use Orchid\Platform\Core\Models\Post;
 class PagesTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * データベース初期値設定実行
      *
      * @return void
      */

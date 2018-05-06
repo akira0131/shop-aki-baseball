@@ -9,32 +9,24 @@ class ForgotPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Controller
+    | パスワードリセットコントローラ
     |--------------------------------------------------------------------------
     |
-    | This controller is responsible for handling password reset emails and
-    | includes a trait which assists in sending these notifications from
-    | your application to your users. Feel free to explore this trait.
+    | このコントローラはパスワードリセットメールの処理の責務を持ち、
+    | アプリケーションからユーザへ通知を送るために役立つトレイトを
+    | 取り込む。自由にこのトレイトを調べてください。
     |
     */
 
     use SendsPasswordResetEmails;
 
     /**
-     * Create a new controller instance.
+     * 新しいコントローラインスタンスの生成
      *
      * @return void
      */
     public function __construct()
     {
         $this->middleware('guest');
-    }
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function showLinkRequestForm()
-    {
-        return view('dashboard::auth.passwords.email');
     }
 }

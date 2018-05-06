@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Behaviors\Demo;
 
-namespace Orchid\Platform\Behaviors\Demo;
-
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Behaviors\Single;
-use Orchid\Platform\Http\Forms\Posts\UploadPostForm;
+use App\Fields\Field;
+use App\Behaviors\Single;
+use App\Http\Forms\Posts\UploadPostForm;
 
 class Page extends Single
 {

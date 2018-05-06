@@ -4,12 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | アプリケーション名
     |--------------------------------------------------------------------------
     |
-    | This value is the name of your application. This value is used when the
-    | framework needs to place the application's name in a notification or
-    | any other location as required by the application or its packages.
+    | ここにはアプリケーション名を指定します。この名前は
+    | 通知時にアプリケーション名をフレームワークが必要な場合や、
+    | アプリケーションやパッケージが必要としている場合に使用されます。
     |
     */
 
@@ -17,12 +17,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Environment
+    | アプリケーション環境
     |--------------------------------------------------------------------------
     |
-    | This value determines the "environment" your application is currently
-    | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Set this in your ".env" file.
+    | この値により現在実行中のアプリケーションの「環境」が決まります。
+    | これらの値はアプリケーションで活用する様々なサービスを好み通りに
+    | 設定するために使用します。".env"ファイルに値を設定してください。
     |
     */
 
@@ -30,12 +30,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Debug Mode
+    | アプリケーションデバッグモード
     |--------------------------------------------------------------------------
     |
-    | When your application is in debug mode, detailed error messages with
-    | stack traces will be shown on every error that occurs within your
-    | application. If disabled, a simple generic error page is shown.
+    | アプリケーションをデバッグモードにすると、アプリケーションでエラーが発生する
+    | たびにスタックトレースともに、詳細なエラーメッセージが表示されます。
+    | このモードでない場合、シンプルで一般利用者向きなエラーページが表示されます。
     |
     */
 
@@ -43,12 +43,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application URL
+    | アプリケーションURL
     |--------------------------------------------------------------------------
     |
-    | This URL is used by the console to properly generate URLs when using
-    | the Artisan command line tool. You should set this to the root of
-    | your application so that it is used when running Artisan tasks.
+    | このURLはArtisanコマンドラインツールを使用する時に正しい
+    | URLを生成するために使用します。アプリケーションのルートのURLを設定してください。
+    | Artisanコマンドを実行する時に使用されます。
     |
     */
 
@@ -56,38 +56,38 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Timezone
+    | アプリケーションタイムゾーン
     |--------------------------------------------------------------------------
     |
-    | Here you may specify the default timezone for your application, which
-    | will be used by the PHP date and date-time functions. We have gone
-    | ahead and set this to a sensible default for you out of the box.
-    |
-    */
-
-    'timezone' => 'UTC',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Application Locale Configuration
-    |--------------------------------------------------------------------------
-    |
-    | The application locale determines the default locale that will be used
-    | by the translation service provider. You are free to set this value
-    | to any of the locales which will be supported by the application.
+    | ここではアプリケーションのデフォルトタイムゾーンを指定します。これは
+    | PHPの日付／時間関数で使用されます。最初から未設定でも使用できるように
+    | 適切なデフォルトを設定してあります。
     |
     */
 
-    'locale' => 'en',
+    'timezone' => 'Asia/Tokyo',
 
     /*
     |--------------------------------------------------------------------------
-    | Application Fallback Locale
+    | アプリケーションローカル設定
     |--------------------------------------------------------------------------
     |
-    | The fallback locale determines the locale to use when the current one
-    | is not available. You may change the value to correspond to any of
-    | the language folders that are provided through your application.
+    | アプリケーションローカルは翻訳サービスプロバイダにより使用される
+    | デフォルトローカルを指定します。アプリケーションで提供するローカルを
+    | 自由に設定してください。
+    |
+    */
+
+    'locale' => 'ja',
+
+    /*
+    |--------------------------------------------------------------------------
+    | アプリケーションフォールバック言語
+    |--------------------------------------------------------------------------
+    |
+    | フォールバック言語は現在のローカルが使用できない場合に、
+    | 代替として使われます。アプリケーション全体に対して用意されている
+    | 言語フォルダーに対応するコードであればどれでも使用可能です。
     |
     */
 
@@ -95,12 +95,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Encryption Key
+    | 暗号化キー
     |--------------------------------------------------------------------------
     |
-    | This key is used by the Illuminate encrypter service and should be set
-    | to a random, 32 character string, otherwise these encrypted strings
-    | will not be safe. Please do this before deploying an application!
+    | このキーはIlluminate暗号化サービスで使用されます。ランダムな32文字を
+    | セットしないと安全ではありません。アプリケーションをデプロイ
+    | る前に、必ず変更してください。
     |
     */
 
@@ -110,19 +110,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Autoloaded Service Providers
+    | 自動ロードされるサービスプロバイダ
     |--------------------------------------------------------------------------
     |
-    | The service providers listed here will be automatically loaded on the
-    | request to your application. Feel free to add your own services to
-    | this array to grant expanded functionality to your applications.
+    | ここにリストしたサービスプロバイダはアプリケーションのリクエストに対し
+    | 自動的にロードされます。アプリケーションの機能を拡張するため、この配列へ
+    | 自由に自分のサービスを付け加えてください。
     |
     */
 
     'providers' => [
 
         /*
-         * Laravel Framework Service Providers...
+         * Laravelフレームワークサービスプロバイダ
          */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -148,30 +148,31 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Package Service Providers...
+         * パッケージのサービスプロバイダ
          */
-        Orchid\Platform\Providers\FoundationServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
-         * Application Service Providers...
+         * アプリケーションサービスプロバイダ
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\FoundationServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Class Aliases
+    | クラスエイリアス
     |--------------------------------------------------------------------------
     |
-    | This array of class aliases will be registered when this application
-    | is started. However, feel free to register as many as you wish as
-    | the aliases are "lazy" loaded so they don't hinder performance.
+    | このクラスエイリアスの配列はこのアプリケーションが開始されると登録されます。
+    | エイリアスをどんなに好きなだけ自由に登録しても、「遅延」ロードされるので、
+    | パフォーマンスを妨げることはありません。
     |
     */
 
@@ -210,8 +211,284 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Dashboard' => Orchid\Platform\Facades\Dashboard::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Dashboard' => App\Facades\Dashboard::class,
 
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Headless
+    |--------------------------------------------------------------------------
+    |
+    | If the dashboard is turned true, then all routes stop working,
+    | this is required if you are building your control panel or you do not need it
+    |
+    */
+
+    'headless' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Sub-Domain Routing
+    |--------------------------------------------------------------------------
+    |
+    | You can use the admin panel on a separate subdomain.
+    | For example: 'admin.example.com'
+    |
+    */
+
+    //'domain' => env('DASHBOARD_DOMAIN', dashboard_domain()),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Route Prefixes
+    |--------------------------------------------------------------------------
+    |
+    | This prefix method can be used for the prefix of each
+    | route in the administration panel. For example, you can change to 'admin'
+    |
+    */
+
+    'prefix' => env('DASHBOARD_PREFIX', 'dashboard'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | ルーティングルールの「middleware」
+    |--------------------------------------------------------------------------
+    |
+    | Provide a convenient mechanism for filtering HTTP
+    | requests entering your application.
+    |
+    */
+
+    'middleware' => [
+        'public'  => ['web'],
+        'private' => ['web', 'dashboard'],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Auth
+    |--------------------------------------------------------------------------
+    |
+    | Available settings
+    |
+    */
+
+    'auth' => [
+        'display' => true,
+        'image'   => '/img/background.jpg',
+        'slogan'  => 'dashboard::auth/account.slogan',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Locales
+    |--------------------------------------------------------------------------
+    |
+    | Localization of records
+    |
+    */
+
+    'locales' => [
+        'en' => [
+            'name'     => 'English',
+            'script'   => 'Latn',
+            'dir'      => 'ltr',
+            'native'   => 'English',
+            'regional' => 'en_GB',
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Available fields to form templates
+    |--------------------------------------------------------------------------
+    |
+    | Declared fields for user filling.
+    | Be shy and add to what you need
+    |
+    */
+
+    'fields' => [
+        'textarea'     => Orchid\Platform\Fields\Types\TextAreaField::class,
+        'input'        => Orchid\Platform\Fields\Types\InputField::class,
+        'list'         => Orchid\Platform\Fields\Types\ListField::class,
+        'tags'         => Orchid\Platform\Fields\Types\TagsField::class,
+        'select'       => Orchid\Platform\Fields\Types\SelectField::class,
+        'relationship' => Orchid\Platform\Fields\Types\RelationshipField::class,
+        'place'        => Orchid\Platform\Fields\Types\PlaceField::class,
+        'picture'      => Orchid\Platform\Fields\Types\PictureField::class,
+        'datetime'     => Orchid\Platform\Fields\Types\DateTimerField::class,
+        'checkbox'     => Orchid\Platform\Fields\Types\CheckBoxField::class,
+        'code'         => Orchid\Platform\Fields\Types\CodeField::class,
+        'wysiwyg'      => Orchid\Platform\Fields\Types\TinyMCEField::class,
+        'password'     => Orchid\Platform\Fields\Types\PasswordField::class,
+        'markdown'     => Orchid\Platform\Fields\Types\SimpleMDEField::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Single Behaviors
+    |--------------------------------------------------------------------------
+    |
+    | Static pages
+    |
+    */
+
+    'single' => [
+        App\Behaviors\Demo\Page::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Many Behaviors
+    |--------------------------------------------------------------------------
+    |
+    | An abstract pattern of behavior record
+    |
+    */
+
+    'many' => [
+        Orchid\Platform\Behaviors\Demo\Post::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Common Behaviors
+    |--------------------------------------------------------------------------
+    */
+
+    'common' => [
+        'user'     => Orchid\Platform\Behaviors\Base\UserBase::class,
+        'category' => Orchid\Platform\Behaviors\Base\CategoryBase::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Available menu
+    |--------------------------------------------------------------------------
+    |
+    | Marked menu areas
+    |
+    */
+
+    'menu' => [
+        'header'  => 'Header menu',
+        'sidebar' => 'Sidebar menu',
+        'footer'  => 'Footer menu',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Filesystem Disks
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure as many filesystem "disks" as you wish, and you
+    | may even configure multiple disks of the same driver. Defaults have
+    | been setup for each driver as an example of the required options.
+    |
+    | Supported Drivers: "local", "ftp", "s3", "rackspace"
+    |
+    */
+
+    'disks' => [
+        'media'      => 'public',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Images
+    |--------------------------------------------------------------------------
+    |
+    | Image processing 100x150x75
+    | 100 - integer width
+    | 150 - integer height
+    | 75  - integer quality
+    |
+    */
+
+    'images' => [
+        'low'    => [
+            'width'   => '50',
+            'height'  => '50',
+            'quality' => '50',
+        ],
+        'medium' => [
+            'width'   => '600',
+            'height'  => '300',
+            'quality' => '75',
+        ],
+        'high'   => [
+            'width'   => '1000',
+            'height'  => '500',
+            'quality' => '95',
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Attachment types
+    |--------------------------------------------------------------------------
+    |
+    | Grouping attachments by file extension type
+    |
+    */
+
+    'attachment' => [
+        'image' => [
+            'png',
+            'jpg',
+            'jpeg',
+            'gif',
+        ],
+        'video' => [
+            'mp4',
+            'mkv',
+        ],
+        'docs'  => [
+            'doc',
+            'docx',
+            'pdf',
+            'xls',
+            'xlsx',
+            'xml',
+            'txt',
+            'zip',
+            'rar',
+            'svg',
+            'ppt',
+            'pptx',
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Dashboard Widgets
+    |--------------------------------------------------------------------------
+    |
+    | Widgets that will be displayed on the main screen
+    |
+    */
+
+    'main_widgets' => [
+        App\Http\Widgets\UpdateWidget::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Dashboard Resource
+    |--------------------------------------------------------------------------
+    |
+    | Automatically connect the stored links. For example js and css files
+    |
+    */
+
+    'resource' => [
+        'stylesheets' => [],
+        'scripts'     => [],
     ],
 
 ];

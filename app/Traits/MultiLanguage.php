@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Core\Traits;
+namespace App\Traits;
 
 use Illuminate\Support\Facades\App;
 

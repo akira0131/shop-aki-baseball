@@ -21,7 +21,7 @@
                 </button>
 
                 <button type="button" class="btn btn-link" id="refresh"><i class="icon-refresh"></i>
-				    {{trans('dashboard::systems/media.refresh')}}
+                    {{trans('dashboard::systems/media.refresh')}}
                 </button>
                  <button type="button" class="btn btn-link" id="move"><i class="icon-cursor-move"></i>
                      {{trans('dashboard::systems/media.move_file_folder')}}
@@ -305,7 +305,7 @@
                     <div class="modal-body">
                         <h4>{{trans('dashboard::systems/media.sure_delete')}} '<span class="confirm_delete_name"></span>'</h4>
                         <h5 class="folder_warning"><i class="icon-exclamation"></i>
-						{{trans('dashboard::systems/media.delete_folder_question')}}</h5>
+                        {{trans('dashboard::systems/media.delete_folder_question')}}</h5>
                     </div>
 
                     <div class="modal-footer">

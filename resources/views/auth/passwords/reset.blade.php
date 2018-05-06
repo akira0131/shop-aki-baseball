@@ -4,7 +4,7 @@
 
 
 
-    <p class="m-t-lg">Reset Password</p>
+    <p class="m-t-lg">Reset パスワード</p>
 
 
     <form class="m-t-md" role="form" method="POST"
@@ -30,23 +30,23 @@
         </div>
 
         <div class="form-group form-group-default {{ $errors->has('password') ? ' has-error' : '' }}">
-            <label>Password</label>
+            <label>パスワード</label>
             <div class="controls">
-                <input type="password" name="password" placeholder="Password"
+                <input type="password" name="password" placeholder="パスワード"
                        class="form-control" required>
 
-                @if ($errors->has('Password'))
+                @if ($errors->has('パスワード'))
                     <span class="form-text text-muted">
-                        <strong>{{ $errors->first('Password') }}</strong>
+                        <strong>{{ $errors->first('パスワード') }}</strong>
                     </span>
                 @endif
             </div>
         </div>
 
         <div class="form-group form-group-default {{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-            <label>Confirm Password</label>
+            <label>Confirm パスワード</label>
             <div class="controls">
-                <input type="password" name="password_confirmation" placeholder="Confirm Password"
+                <input type="password" name="password_confirmation" placeholder="Confirm パスワード"
                        class="form-control" required>
 
                 @if ($errors->has('password_confirmation'))
@@ -59,7 +59,7 @@
 
 
         <button class="btn btn-default btn-block m-t-md" type="submit">
-            <i class="icon-refresh text-xs m-r-xs"></i> Reset Password
+            <i class="icon-refresh text-xs m-r-xs"></i> Reset パスワード
         </button>
     </form>
 

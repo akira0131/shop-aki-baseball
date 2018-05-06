@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
-use Orchid\Platform\Kernel\Dashboard;
+use App\Kernel\Dashboard;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 
@@ -24,7 +22,7 @@ class FoundationServiceProvider extends ServiceProvider
 
         $this->registerDatabase();
         $this->registerTranslations();
-        $this->registerConfig();
+        //$this->registerConfig();
         $this->registerViews();
 
         $this->registerProviders();
@@ -59,23 +57,23 @@ class FoundationServiceProvider extends ServiceProvider
     /**
      * Register config.
      */
-    protected function registerConfig()
-    {
-        $this->publishes([
-            realpath(DASHBOARD_PATH.'/config/scout.php')    => config_path('scout.php'),
-            realpath(DASHBOARD_PATH.'/config/platform.php') => config_path('platform.php'),
-            realpath(DASHBOARD_PATH.'/config/widget.php')   => config_path('widget.php'),
-        ]);
-
-        $this->mergeConfigFrom(realpath(DASHBOARD_PATH.'/config/platform.php'), 'platform');
-    }
+    //protected function registerConfig()
+    //{
+    //    $this->publishes([
+    //        realpath(DASHBOARD_PATH.'/config/scout.php')    => config_path('scout.php'),
+    //        realpath(DASHBOARD_PATH.'/config/platform.php') => config_path('platform.php'),
+    //        realpath(DASHBOARD_PATH.'/config/widget.php')   => config_path('widget.php'),
+    //    ]);
+//
+    //    $this->mergeConfigFrom(realpath(DASHBOARD_PATH.'/config/platform.php'), 'platform');
+    //}
 
     /**
      * Register views.
      */
     public function registerViews()
     {
-        if (config('platform.headless')) {
+        if (config('app.headless')) {
             return;
         }
 
@@ -123,8 +121,9 @@ class FoundationServiceProvider extends ServiceProvider
             });
         }
 
+        // 「__DIR__」の扱いが難しい
         if (! defined('DASHBOARD_PATH')) {
-            define('DASHBOARD_PATH', realpath(__DIR__.'/../../../'));
+            define('DASHBOARD_PATH', realpath(__DIR__.'/../../'));
         }
     }
 }

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Behaviors;
+namespace App\Behaviors;
 
 use Illuminate\View\View;
 use Illuminate\Support\Collection;
-use Orchid\Platform\Core\Models\Post;
+use App\Core\Models\Post;
 
 abstract class Many
 {

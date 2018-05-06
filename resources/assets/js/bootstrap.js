@@ -14,9 +14,9 @@ document.addEventListener('turbolinks:load', function() {
 });
 
 /**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
+ * Laravelのバックエンドにリクエストを簡単に発行できるように、axios HTTP
+ * ライブラリをロードします。このライブラリは自動的に"XSRF"トークン
+ * クッキーの値に基づいて、ヘッダーベースのCSRFトークンを送ります。
  */
 
 window.axios = require('axios');

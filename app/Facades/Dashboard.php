@@ -1,11 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Facades;
 
-namespace Orchid\Platform\Facades;
+use App\Kernel\Dashboard as Dash;
 
 use Illuminate\Support\Facades\Facade;
-use Orchid\Platform\Kernel\Dashboard as Dash;
 
 /**
  * Class Dashboard.

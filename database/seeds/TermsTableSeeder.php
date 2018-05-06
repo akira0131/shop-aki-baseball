@@ -7,7 +7,7 @@ use Orchid\Platform\Core\Models\Taxonomy;
 class TermsTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * データベース初期値設定実行
      *
      * @return void
      */

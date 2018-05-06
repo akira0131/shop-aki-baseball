@@ -1,19 +1,18 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Kernel;
 
-namespace Orchid\Platform\Kernel;
+use App\Menu\Menu;
+use App\Access\Permissions;
 
-use Orchid\Platform\Menu\Menu;
 use Illuminate\Support\Collection;
-use Orchid\Platform\Access\Permissions;
 
 class Dashboard
 {
     /**
-     * ORCHID Version.
+     * APPLICATION Version.
      */
-    const VERSION = '2.2.3';
+    const VERSION = '1.0.0';
 
     /**
      * @var
@@ -63,13 +62,14 @@ class Dashboard
     }
 
     /**
-     * @param $path
+     * ルーティングルールの「prefix」
      *
+     * @param $path
      * @return string
      */
     public static function prefix($path = '') : string
     {
-        $prefix = config('platform.prefix');
+        $prefix = config('app.prefix');
 
         return $prefix.$path;
     }

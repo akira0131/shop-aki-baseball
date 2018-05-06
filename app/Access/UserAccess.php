@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Access;
 
-namespace Orchid\Platform\Access;
+use App\Models\Role;
+use App\Events\Systems\Roles\RemoveRoleEvent;
+use App\Events\Systems\Roles\AddRoleEvent;
 
-use Orchid\Platform\Core\Models\Role;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Platform\Events\Systems\Roles\AddRoleEvent;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Orchid\Platform\Events\Systems\Roles\RemoveRoleEvent;
 
 trait UserAccess
 {

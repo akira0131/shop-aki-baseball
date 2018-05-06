@@ -1,10 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Providers;
 
-namespace Orchid\Platform\Providers;
+use App\Kernel\Dashboard;
 
-use Orchid\Platform\Kernel\Dashboard;
 use Illuminate\Support\ServiceProvider;
 
 class PermissionServiceProvider extends ServiceProvider

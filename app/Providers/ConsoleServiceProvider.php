@@ -1,20 +1,19 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Providers;
 
-namespace Orchid\Platform\Providers;
+use App\Console\Commands\MakeRows;
+use App\Console\Commands\MakeChart;
+use App\Console\Commands\MakeTable;
+use App\Console\Commands\MakeFilter;
+use App\Console\Commands\MakeScreen;
+use App\Console\Commands\MakeWidget;
+use App\Console\Commands\MakeManyBehavior;
+use App\Console\Commands\PublicLinkCommand;
+use App\Console\Commands\CreateAdminCommand;
+use App\Console\Commands\MakeSingleBehavior;
 
 use Illuminate\Support\ServiceProvider;
-use Orchid\Platform\Console\Commands\MakeRows;
-use Orchid\Platform\Console\Commands\MakeChart;
-use Orchid\Platform\Console\Commands\MakeTable;
-use Orchid\Platform\Console\Commands\MakeFilter;
-use Orchid\Platform\Console\Commands\MakeScreen;
-use Orchid\Platform\Console\Commands\MakeWidget;
-use Orchid\Platform\Console\Commands\MakeManyBehavior;
-use Orchid\Platform\Console\Commands\PublicLinkCommand;
-use Orchid\Platform\Console\Commands\CreateAdminCommand;
-use Orchid\Platform\Console\Commands\MakeSingleBehavior;
 
 class ConsoleServiceProvider extends ServiceProvider
 {

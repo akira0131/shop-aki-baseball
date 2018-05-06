@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Http\Controllers;
+namespace App\Http\Controllers;
 
 class DashboardController extends Controller
 {
@@ -12,7 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard::index', [
-            'widgets' => config('platform.main_widgets', []),
+            'widgets' => config('app.main_widgets', []),
         ]);
     }
 }

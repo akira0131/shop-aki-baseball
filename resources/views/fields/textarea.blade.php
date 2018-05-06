@@ -8,5 +8,3 @@
     @endif
 </div>
 @include('dashboard::partials.fields.hr', ['show' => $hr ?? true])
-
-

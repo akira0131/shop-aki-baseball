@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title') - ORCHID</title>
-    <meta name="csrf_token" content="{{csrf_token()}}">
-    <meta name="auth" content="{{Auth::check()}}">
-    <link rel="stylesheet" type="text/css" href="{{mix('/css/orchid.css','orchid')}}">
+    <meta name="csrf_token" content="{{ csrf_token() }}">
+    <meta name="auth" content="{{ Auth::check() }}">
+    <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/orchid/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/orchid/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/orchid/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/orchid/favicon/manifest.json">
-    <link rel="mask-icon" href="/orchid/favicon/safari-pinned-tab.svg" color="#1a2021">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a2021">
     <meta name="apple-mobile-web-app-title" content="ORCHID">
     <meta name="application-name" content="ORCHID">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="turbolinks-root" content="/{{Dashboard::prefix()}}">
-    <meta name="dashboard-prefix" content="{{Dashboard::prefix()}}">
+    <meta name="turbolinks-root" content="/{{ Dashboard::prefix() }}">
+    <meta name="dashboard-prefix" content="{{ Dashboard::prefix() }}">
 
     <meta http-equiv="X-DNS-Prefetch-Control" content="on"/>
     <link rel="dns-prefetch" href="{{ config('app.url') }}"/>
@@ -27,12 +27,12 @@
 
 
     @foreach(Dashboard::getProperty('resources')['stylesheets'] as $stylesheet)
-        <link rel="stylesheet" href="{{$stylesheet}}">
+        <link rel="stylesheet" href="{{ $stylesheet }}">
     @endforeach
 
     @stack('stylesheets')
 
-    <script src="{{ mix('/js/orchid.js','orchid')}}" type="text/javascript"></script>
+    <script src="{{ mix('/js/app.js') }}" type="text/javascript"></script>
 </head>
 
 

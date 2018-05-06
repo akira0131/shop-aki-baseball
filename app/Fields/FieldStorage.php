@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Fields;
 
-namespace Orchid\Platform\Fields;
-
-use Orchid\Platform\Kernel\Storage;
+use App\Kernel\Storage;
 
 class FieldStorage extends Storage
 {

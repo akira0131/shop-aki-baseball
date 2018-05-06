@@ -20,12 +20,23 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
+    // ログイン情報の参照先TBL
+    protected $guard = 'users';
+ 
+    // ログイン後のリダイレクト先
+    protected $redirectTo = '/dashboard';
+    
+    // ログアウト後のリダイレクト先
+    protected $redirectAfterLogout = '/home';
+ 
+    // ログインIDの項目
+    protected $username = 'email';
+ 
+    // ログインスロットルとなるまで最高のログイン失敗回数
+    protected $maxLoginAttempts = 5;
+    
+    // ログインスロットルとなってからの待ち秒数
+    protected $lockoutTime = 60;
 
     /**
      * Create a new controller instance.
@@ -34,16 +45,17 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->redirectTo = config('platform.prefix');
-        
+        // ゲストユーザはログアウト処理をしない
         $this->middleware('guest')->except('logout');
     }
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * ログイン時のレンダー先
+     *
+     * @return void
      */
     public function showLoginForm()
     {
-        return view('dashboard::auth.login');
+        return view('auth.login');
     }
 }

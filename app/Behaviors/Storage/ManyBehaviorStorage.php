@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Behaviors\Storage;
 
-namespace Orchid\Platform\Behaviors\Storage;
-
-use Orchid\Platform\Kernel\Storage;
+use App\Kernel\Storage;
 
 class ManyBehaviorStorage extends Storage
 {

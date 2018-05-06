@@ -6,7 +6,7 @@
 
 
     <div class="simplemde-wrapper">
-	<textarea @include('dashboard::partials.fields.attributes', ['attributes' => $attributes])>{{$attributes['value']}}</textarea>
+    <textarea @include('dashboard::partials.fields.attributes', ['attributes' => $attributes])>{{$attributes['value']}}</textarea>
     </div>
 
     @if(isset($help))

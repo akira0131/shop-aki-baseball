@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Menu;
+namespace App\Menu;
 
 use Illuminate\Support\Facades\Auth;
 

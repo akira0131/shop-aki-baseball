@@ -1,15 +1,14 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
+use App\Access\UserAccess;
+use App\Access\UserInterface;
+use App\Traits\FilterTrait;
+use App\Traits\MultiLanguage;
+use App\Notifications\ResetPassword;
 
-use Orchid\Platform\Access\UserAccess;
 use Illuminate\Notifications\Notifiable;
-use Orchid\Platform\Access\UserInterface;
-use Orchid\Platform\Core\Traits\FilterTrait;
-use Orchid\Platform\Core\Traits\MultiLanguage;
-use Orchid\Platform\Notifications\ResetPassword;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements UserInterface

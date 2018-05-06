@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Kernel;
+namespace App\Kernel;
 
 interface StorageInterface
 {

@@ -6,7 +6,7 @@ use Orchid\Platform\Core\Models\User;
 class UsersTableSeeder2 extends Seeder
 {
     /**
-     * Run the database seeds.
+     * データベース初期値設定実行
      *
      * @return void
      */

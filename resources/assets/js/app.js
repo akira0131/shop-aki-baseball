@@ -1,7 +1,7 @@
 /**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
+ * 最初にこのプロジェクトのJavascriptの依存パッケージを全てロードします。
+ * これはVueと他のライブラリも含まれます。堅牢でパワフルな
+ * アプリケーション構築の素晴らしいスタート地点となるでしょう。
  */
 
 window.Turbolinks = require('turbolinks');

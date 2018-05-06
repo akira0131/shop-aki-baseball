@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'domain' => env('DASHBOARD_DOMAIN', dashboard_domain()),
+    //'domain' => env('DASHBOARD_DOMAIN', dashboard_domain()),
 
     /*
     |--------------------------------------------------------------------------
@@ -124,7 +124,7 @@ return [
     */
 
     'single' => [
-        Orchid\Platform\Behaviors\Demo\Page::class,
+        App\Behaviors\Demo\Page::class,
     ],
 
     /*
@@ -137,7 +137,7 @@ return [
     */
 
     'many' => [
-        Orchid\Platform\Behaviors\Demo\Post::class,
+        App\Behaviors\Demo\Post::class,
     ],
 
     /*

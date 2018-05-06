@@ -30,7 +30,7 @@
             </li>
         @endif
 
-			<li  class="nav-item">
+            <li  class="nav-item">
                 <button type="submit"
                         onclick="window.dashboard.validateForm('post-form','{{trans('dashboard::common.alert.validate')}}')"
                         form="post-form"
@@ -71,7 +71,7 @@
                             @if(count($type->render() ) > 1)
                                 <ul class="nav nav-tabs bg-light">
                                 @foreach($type->render() as $name => $view)
-										<li class="nav-item ">
+                                        <li class="nav-item ">
                                         <a class="nav-link @if ($loop->first) active @endif" data-target="#module-{{$loop->iteration}}" role="tab" data-toggle="tab"
                                            aria-expanded="true">{{$name}}</a>
                                     </li>

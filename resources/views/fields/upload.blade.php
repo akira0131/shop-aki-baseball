@@ -160,8 +160,8 @@ document.addEventListener('turbolinks:load', function() {
       const instanceDropZone = this;
 
       const ids = {!!json_encode($value)!!};
-	 
-	  
+     
+      
       if (ids !== undefined) {
         $.ajax({
           type: 'post',
@@ -191,14 +191,14 @@ document.addEventListener('turbolinks:load', function() {
               $('.dz-preview:last-child')
                 .attr('data-file-id', item.id)
                 .addClass('file-sort');
-			  $(
-				"<input type='hidden' class='files-" +
-				  item.id +
-				  "' name='{{$name}}[]' value='" +
-				  item.id +
-				  "'  />"
-			    ).appendTo('.dropzone');
-				
+              $(
+                "<input type='hidden' class='files-" +
+                  item.id +
+                  "' name='{{$name}}[]' value='" +
+                  item.id +
+                  "'  />"
+                ).appendTo('.dropzone');
+                
             });
 
             $('.dz-progress').remove();

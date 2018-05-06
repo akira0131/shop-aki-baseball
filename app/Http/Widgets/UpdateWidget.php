@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Widgets;
 
-namespace Orchid\Platform\Http\Widgets;
+use App\Widget\Widget;
+use App\Kernel\Dashboard;
 
 use Composer\Semver\Comparator;
-use Orchid\Platform\Widget\Widget;
 use Illuminate\Support\Facades\Cache;
-use Orchid\Platform\Kernel\Dashboard;
 
 class UpdateWidget extends Widget
 {

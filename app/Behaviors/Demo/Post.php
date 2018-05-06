@@ -1,17 +1,15 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Behaviors\Demo;
 
-namespace Orchid\Platform\Behaviors\Demo;
-
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Behaviors\Many;
-use Orchid\Platform\Platform\Fields\TD;
-use Orchid\Platform\Http\Filters\SearchFilter;
-use Orchid\Platform\Http\Filters\StatusFilter;
-use Orchid\Platform\Http\Filters\CreatedFilter;
-use Orchid\Platform\Http\Forms\Posts\BasePostForm;
-use Orchid\Platform\Http\Forms\Posts\UploadPostForm;
+use App\Fields\Field;
+use App\Behaviors\Many;
+use App\Platform\Fields\TD;
+use App\Http\Filters\SearchFilter;
+use App\Http\Filters\StatusFilter;
+use App\Http\Filters\CreatedFilter;
+use App\Http\Forms\Posts\BasePostForm;
+use App\Http\Forms\Posts\UploadPostForm;
 
 class Post extends Many
 {
