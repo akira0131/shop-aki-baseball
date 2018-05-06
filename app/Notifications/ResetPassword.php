@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Notifications;
+namespace App\Notifications;
 
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;

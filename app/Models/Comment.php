@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
-
+use App\Traits\Attachment;
+use App\Builders\CommentBuilder;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Platform\Core\Traits\Attachment;
-use Orchid\Platform\Core\Builders\CommentBuilder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Posts;
 
-namespace Orchid\Platform\Http\Forms\Posts;
-
-use Orchid\Platform\Forms\Form;
+use App\Models\Post;
+use App\Forms\Form;
 use Illuminate\Contracts\View\View;
-use Orchid\Platform\Core\Models\Post;
 
 class UploadPostForm extends Form
 {

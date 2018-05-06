@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //foreach (glob(sprintf('%s/Support/*.php', app_path())) as $helper_file){
+        //    require_once($helper_file);
+        //}
+        //foreach (glob(DASHBOARD_PATH.'/Support/*.php') as $helperFile) {
+        //    require_once($helperFile);
+        //}
     }
 }

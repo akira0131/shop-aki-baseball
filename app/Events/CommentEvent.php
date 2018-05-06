@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Events;
 
-namespace Orchid\Platform\Events;
-
-use Orchid\Platform\Http\Forms\Comment\CommentFormGroup;
+use App\Http\Forms\Comment\CommentFormGroup;
 
 class CommentEvent
 {

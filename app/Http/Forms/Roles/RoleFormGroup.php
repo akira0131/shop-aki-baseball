@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Systems\Roles;
 
-namespace Orchid\Platform\Http\Forms\Systems\Roles;
-
+use App\Models\Role;
+use App\Forms\FormGroup;
+use App\Events\Systems\RolesEvent;
 use Illuminate\Contracts\View\View;
-use Orchid\Platform\Forms\FormGroup;
-use Orchid\Platform\Core\Models\Role;
-use Orchid\Platform\Events\Systems\RolesEvent;
 
 class RoleFormGroup extends FormGroup
 {

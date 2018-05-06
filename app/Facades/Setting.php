@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Facades;
 
-namespace Orchid\Platform\Facades;
-
+use App\Models\Setting as SettingModel;
 use Illuminate\Support\Facades\Facade;
-use Orchid\Platform\Core\Models\Setting as SettingModel;
 
 class Setting extends Facade
 {

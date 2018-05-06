@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
+use App\Http\Controllers\Controller;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Orchid\Platform\Http\Controllers\Controller;
 
 class MediaController extends Controller
 {

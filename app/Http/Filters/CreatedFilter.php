@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Filters;
 
-namespace Orchid\Platform\Http\Filters;
-
-use Orchid\Platform\Filters\Filter;
+use App\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 
 class CreatedFilter extends Filter

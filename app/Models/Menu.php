@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
-
+use App\Traits\Attachment;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Platform\Core\Traits\Attachment;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 

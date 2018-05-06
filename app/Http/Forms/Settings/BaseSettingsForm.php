@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Orchid\Platform\Http\Forms\Settings;
+namespace App\Http\Forms\Settings;
 
-use Orchid\Platform\Forms\Form;
+use App\Models\Setting;
+use App\Forms\Form;
 use Illuminate\Contracts\View\View;
-use Orchid\Platform\Core\Models\Setting;
 
 class BaseSettingsForm extends Form
 {

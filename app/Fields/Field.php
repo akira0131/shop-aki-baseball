@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Fields;
 
-namespace Orchid\Platform\Fields;
-
-use Orchid\Platform\Exceptions\TypeException;
-use Orchid\Platform\Exceptions\FieldRequiredAttributeException;
+use App\Exceptions\TypeException;
+use App\Exceptions\FieldRequiredAttributeException;
 
 /**
  * Class Field.

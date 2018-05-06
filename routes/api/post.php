@@ -14,6 +14,6 @@
 $this->group([
     'middleware' => ['api'],
     'prefix'     => 'api',
-    'namespace'  => 'Orchid\Platform\Http\Controllers\Api',
+    'namespace'  => 'App\Http\Controllers\Api',
 ], function ($router) {
 });

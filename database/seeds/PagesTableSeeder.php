@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Orchid\Platform\Core\Models\Post;
+use App\Models\Post;
 
 //use Orchid\Platform\Core\Models\Comment;
 

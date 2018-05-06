@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use Orchid\Platform\Core\Models\Taxonomy;
+use App\Models\Taxonomy;
 
 /*
 |--------------------------------------------------------------------------

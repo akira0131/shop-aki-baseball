@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Layouts;
 
-namespace Orchid\Platform\Layouts;
-
-use Orchid\Platform\Fields\Builder;
+use App\Fields\Builder;
 
 abstract class Rows
 {

@@ -1,11 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
+use App\Notifications\DashboardNotification;
 
 use Illuminate\Support\Facades\Auth;
-use Orchid\Platform\Notifications\DashboardNotification;
 
 class NotificationController
 {

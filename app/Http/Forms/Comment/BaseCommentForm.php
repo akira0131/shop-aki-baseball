@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Comment;
 
-namespace Orchid\Platform\Http\Forms\Comment;
+use App\Models\Comment;
+use App\Forms\Form;
 
 use Illuminate\Http\Request;
-use Orchid\Platform\Forms\Form;
 use Illuminate\Contracts\View\View;
-use Orchid\Platform\Core\Models\Comment;
 
 class BaseCommentForm extends Form
 {

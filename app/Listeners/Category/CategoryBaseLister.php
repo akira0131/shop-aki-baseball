@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Listeners\Category;
 
-namespace Orchid\Platform\Listeners\Category;
-
-use Orchid\Platform\Http\Forms\Category\CategoryMainForm;
+use App\Http\Forms\Category\CategoryMainForm;
 
 class CategoryBaseLister
 {

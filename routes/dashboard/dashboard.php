@@ -11,9 +11,9 @@
 |
 */
 
-$this->domain(config('app.domain'))->group(function () {
+$this->domain(config('platform.domain'))->group(function () {
     $this->group([
-        'middleware' => config('app.middleware.private'),
+        'middleware' => config('platform.middleware.private'),
         'prefix'     => \App\Kernel\Dashboard::prefix(),
         'namespace'  => 'App\Http\Controllers',
     ], function (\Illuminate\Routing\Router $router) {

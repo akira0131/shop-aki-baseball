@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Listeners\Systems\Users;
 
-namespace Orchid\Platform\Listeners\Systems\Users;
-
-use Orchid\Platform\Http\Forms\Systems\Users\BaseUserForm;
+use App\Http\Forms\Systems\Users\BaseUserForm;
 
 class UserBaseListener
 {

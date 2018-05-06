@@ -6,13 +6,12 @@ use App\Kernel\Dashboard;
 use App\Fields\FieldStorage;
 use App\Behaviors\Storage\ManyBehaviorStorage;
 use App\Behaviors\Storage\SingleBehaviorStorage;
-
 use Illuminate\Support\ServiceProvider;
 
 class DashboardProvider extends ServiceProvider
 {
     /**
-     * Boot the application events.
+     * Boot the platform.ication events.
      *
      * @param Dashboard $dashboard
      */

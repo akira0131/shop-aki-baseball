@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Category;
 
-namespace Orchid\Platform\Http\Forms\Category;
+use App\Models\Category;
+use App\Forms\FormGroup;
+use App\Events\CategoryEvent;
 
 use Illuminate\View\View;
-use Orchid\Platform\Forms\FormGroup;
-use Orchid\Platform\Core\Models\Category;
-use Orchid\Platform\Events\CategoryEvent;
 
 class CategoryFormGroup extends FormGroup
 {

@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Kernel\Dashboard;
-
 use Illuminate\Support\ServiceProvider;
 
 class PermissionServiceProvider extends ServiceProvider

@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Http\Composers\MenuComposer;
-
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 

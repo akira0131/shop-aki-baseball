@@ -65,7 +65,7 @@ class FoundationServiceProvider extends ServiceProvider
     //        realpath(DASHBOARD_PATH.'/config/widget.php')   => config_path('widget.php'),
     //    ]);
 //
-    //    $this->mergeConfigFrom(realpath(DASHBOARD_PATH.'/config/platform.php'), 'platform');
+    //    $this->mergeConfigFrom(realpath(DASHBOARD_PATH.'/config/app.php'), 'app');
     //}
 
     /**
@@ -73,7 +73,7 @@ class FoundationServiceProvider extends ServiceProvider
      */
     public function registerViews()
     {
-        if (config('app.headless')) {
+        if (config('platform.headless')) {
             return;
         }
 
@@ -92,7 +92,7 @@ class FoundationServiceProvider extends ServiceProvider
     }
 
     /**
-     * Get the services provided by the provider.
+     * Providerクラスの読み込み
      *
      * @return array
      */

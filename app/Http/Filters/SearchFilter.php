@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Filters;
 
-namespace Orchid\Platform\Http\Filters;
-
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Filters\Filter;
+use App\Fields\Field;
+use App\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\PostgresConnection;
 
@@ -45,7 +43,7 @@ class SearchFilter extends Filter
     /**
      * @return mixed|void
      *
-     * @throws \Orchid\Platform\Exceptions\TypeException
+     * @throws \App\Exceptions\TypeException
      */
     public function display()
     {
