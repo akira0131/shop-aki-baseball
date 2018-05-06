@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Core\Traits;
+namespace App\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
@@ -13,7 +11,7 @@ trait Attachment
      *
      * @var string
      */
-    protected static $attachmentModel = 'Orchid\Platform\Core\Models\Attachment';
+    protected static $attachmentModel = 'App\Models\Attachment';
 
     /**
      * @return string

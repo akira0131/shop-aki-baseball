@@ -1,19 +1,17 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Posts;
 
-namespace Orchid\Platform\Http\Controllers\Posts;
-
+use App\Models\Post;
+use App\Facades\Alert;
+use App\Behaviors\Many as PostBehavior;
+use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
-use Orchid\Platform\Facades\Alert;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
-use Orchid\Platform\Core\Models\Post;
-use Orchid\Platform\Http\Controllers\Controller;
-use Orchid\Platform\Behaviors\Many as PostBehavior;
-use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PostController extends Controller
 {

@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
+use App\Models\Comment;
+use App\Facades\Alert;
+use App\Http\Controllers\Controller;
+use App\Http\Forms\Comment\CommentFormGroup;
 
 use Illuminate\Http\Request;
-use Orchid\Platform\Facades\Alert;
-use Orchid\Platform\Core\Models\Comment;
-use Orchid\Platform\Http\Controllers\Controller;
-use Orchid\Platform\Http\Forms\Comment\CommentFormGroup;
 
 class CommentController extends Controller
 {

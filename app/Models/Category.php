@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
-
-use Orchid\Platform\Core\Traits\Attachment;
-use Orchid\Platform\Core\Traits\FilterTrait;
-use Orchid\Platform\Core\Traits\MultiLanguage;
+use App\Traits\Attachment;
+use App\Traits\FilterTrait;
+use App\Traits\MultiLanguage;
 
 class Category extends Taxonomy
 {

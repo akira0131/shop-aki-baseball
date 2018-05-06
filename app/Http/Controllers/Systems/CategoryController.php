@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
+use App\Models\Taxonomy;
+use App\Facades\Alert;
+use App\Http\Forms\Category\CategoryFormGroup;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Orchid\Platform\Facades\Alert;
-use Orchid\Platform\Core\Models\Taxonomy;
-use Orchid\Platform\Http\Controllers\Controller;
-use Orchid\Platform\Http\Forms\Category\CategoryFormGroup;
 
 class CategoryController extends Controller
 {

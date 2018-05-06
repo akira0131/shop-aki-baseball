@@ -1,15 +1,13 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Posts;
 
-namespace Orchid\Platform\Http\Controllers\Posts;
-
+use App\Models\Page;
+use App\Facades\Alert;
+use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Orchid\Platform\Facades\Alert;
 use Illuminate\Support\Facades\Auth;
-use Orchid\Platform\Core\Models\Page;
-use Orchid\Platform\Http\Controllers\Controller;
 
 class PageController extends Controller
 {

@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
-
+use App\Facades\Alert;
 use Illuminate\Http\Request;
-use Orchid\Platform\Facades\Alert;
 use Illuminate\Support\Facades\Artisan;
 
 class CacheController

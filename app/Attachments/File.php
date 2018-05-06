@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Attachments;
 
-namespace Orchid\Platform\Attachments;
-
+use App\Models\Attachment;
 use Mimey\MimeTypes;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
-use Orchid\Platform\Core\Models\Attachment;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 

@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Behaviors\Base;
 
-namespace Orchid\Platform\Behaviors\Base;
-
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Platform\Fields\TD;
+use App\Fields\Field;
+use App\Platform\Fields\TD;
 
 class CategoryBase
 {
@@ -39,7 +37,7 @@ class CategoryBase
 
     /**
      * @return array
-     * @throws \Orchid\Platform\Exceptions\TypeException
+     * @throws \App\Exceptions\TypeException
      */
     public function fields() : array
     {

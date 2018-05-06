@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Layouts;
+namespace App\Layouts;
 
 abstract class Table
 {

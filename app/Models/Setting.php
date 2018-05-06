@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
-
+use App\Traits\SettingTrait;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Platform\Core\Traits\SettingTrait;
 
 class Setting extends Model
 {

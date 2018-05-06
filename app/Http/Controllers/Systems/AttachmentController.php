@@ -1,15 +1,15 @@
 <?php
 
-declare(strict_types=1);
 
-namespace Orchid\Platform\Http\Controllers\Systems;
+namespace App\Http\Controllers\Systems;
+
+use App\Models\Post;
+use App\Models\Attachment;
+use App\Attachments\File;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Orchid\Platform\Attachments\File;
-use Orchid\Platform\Core\Models\Post;
 use Illuminate\Support\Facades\Storage;
-use Orchid\Platform\Core\Models\Attachment;
-use Orchid\Platform\Http\Controllers\Controller;
 
 class AttachmentController extends Controller
 {

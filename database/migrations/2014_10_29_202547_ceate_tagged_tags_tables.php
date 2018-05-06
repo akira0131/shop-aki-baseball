@@ -1,28 +1,10 @@
 <?php
 
-/**
- * Part of the Tags package.
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the 3-clause BSD License.
- *
- * This source file is subject to the 3-clause BSD License that is
- * bundled with this package in the LICENSE file.
- *
- * @package    Tags
- * @version    6.0.1
- * @author     Cartalyst LLC
- * @license    BSD License (3-clause)
- * @copyright  (c) 2011-2018, Cartalyst LLC
- * @link       http://cartalyst.com
- */
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MigrationCartalystTagsCreateTables extends Migration
+class CeateTaggedTagsTables extends Migration
 {
     /**
      * マイグレーション実行

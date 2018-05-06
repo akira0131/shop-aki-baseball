@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Facades;
+namespace App\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Orchid\Platform\Alert\Alert as AlertClass;
+use App\Alert\Alert as AlertClass;
 
 /**
  * Class Alert.

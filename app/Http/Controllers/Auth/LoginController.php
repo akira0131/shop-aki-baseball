@@ -20,42 +20,28 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    // ログイン情報の参照先TBL
-    protected $guard = 'users';
- 
-    // ログイン後のリダイレクト先
+    /**
+     * Where to redirect users after login / registration.
+     *
+     * @var string
+     */
     protected $redirectTo = '/dashboard';
-    
-    // ログアウト後のリダイレクト先
-    protected $redirectAfterLogout = '/home';
- 
-    // ログインIDの項目
-    protected $username = 'email';
- 
-    // ログインスロットルとなるまで最高のログイン失敗回数
-    protected $maxLoginAttempts = 5;
-    
-    // ログインスロットルとなってからの待ち秒数
-    protected $lockoutTime = 60;
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
-        // ゲストユーザはログアウト処理をしない
-        $this->middleware('guest')->except('logout');
+        $this->redirectTo = config('platform.prefix');
+
+        $this->middleware('guest', ['except' => 'logout']);
     }
 
     /**
-     * ログイン時のレンダー先
-     *
-     * @return void
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('dashboard::auth.login');
     }
 }

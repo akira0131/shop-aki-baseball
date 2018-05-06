@@ -1,0 +1,44 @@
+%s/app./platform./g
+platform
+
+    app/Traits/MultiLanguage.php
+    app/Traits/Attachment.php
+    app/Providers/DashboardProvider.php
+    app/Providers/RouteServiceProvider.php
+    app/Providers/FoundationServiceProvider.php
+    app/Models/Attachment.php
+app/Support/helpers.php:            return isset(parse_url(config('app.url'))['host']) ? parse_url(config('app.url'))['host'] : $default;
+    app/Http/Composers/MenuComposer.php
+    app/Http/Middleware/AccessMiddleware.php:        Carbon::setLocale(config('app.locale'));
+app/Http/Forms/Settings/InfoForm.php:        $settings = collect(config('app'));
+    app/Http/Forms/Posts/BasePostForm.php
+    app/Http/Forms/Category/CategoryFormGroup.php
+    app/Http/Forms/Category/CategoryDescForm.php
+    app/Http/Forms/Users/UserFormGroup.php
+    app/Http/Forms/Users/BaseUserForm.php
+    app/Http/Controllers/Posts/PostController.php
+    app/Http/Controllers/Posts/PageController.php
+    app/Http/Controllers/Auth/LoginController.php
+    app/Http/Controllers/Auth/ResetPasswordController.php
+    app/Http/Controllers/DashboardController.php
+    app/Http/Controllers/Systems/MenuController.php
+    app/Http/Controllers/Systems/MediaController.php
+    app/Fields/Field.php
+    app/Attachments/File.php
+app/Notifications/ResetPassword.php:            url(config('app.url').route('dashboard.password.reset', $this->token,
+    app/Kernel/Dashboard.php
+    resources/views/layouts/auth.blade.php
+resources/views/layouts/dashboard.blade.php:    <link rel="dns-prefetch" href="{{ config('app.url') }}"/>
+resources/views/layouts/app.blade.php:    <title>{{ config('app.name', 'Laravel') }}</title>
+resources/views/layouts/app.blade.php:                    {{ config('app.name', 'Laravel') }}
+resources/views/vendor/mail/markdown/message.blade.php:        @component('mail::header', ['url' => config('app.url')])
+resources/views/vendor/mail/markdown/message.blade.php:            {{ config('app.name') }}
+resources/views/vendor/mail/markdown/message.blade.php:            © {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
+resources/views/vendor/mail/html/message.blade.php:        @component('mail::header', ['url' => config('app.url')])
+resources/views/vendor/mail/html/message.blade.php:            {{ config('app.name') }}
+resources/views/vendor/mail/html/message.blade.php:            &copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
+resources/views/vendor/notifications/email.blade.php:@lang('Regards'),<br>{{ config('app.name') }}
+    routes/dashboard/dashboard.php
+    routes/dashboard/auth.php
+    routes/dashboard/post.php
+    routes/dashboard/system.php

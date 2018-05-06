@@ -7,7 +7,6 @@ use App\Access\UserInterface;
 use App\Traits\FilterTrait;
 use App\Traits\MultiLanguage;
 use App\Notifications\ResetPassword;
-
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

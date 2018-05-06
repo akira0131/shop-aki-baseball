@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
-
+use App\Builders\TaxonomyBuilder;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Platform\Core\Builders\TaxonomyBuilder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;

@@ -35,7 +35,7 @@
 
     <div class="bg-pic">
 
-        <img src="{{ config('app.auth.image','/img/background.jpg') }}" alt="" class="lazy">
+        <img src="{{ config('platform.auth.image','/img/background.jpg') }}" alt="" class="lazy">
 
 
         <div class="bg-caption pull-bottom text-white wrapper-md m-b-md">

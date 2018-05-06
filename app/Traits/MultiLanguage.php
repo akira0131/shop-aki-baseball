@@ -33,6 +33,6 @@ trait MultiLanguage
             return array_get($jsonContent, $fullName);
         }
 
-        return array_get($jsonContent, config('app.fallback_locale').'.'.$field);
+        return array_get($jsonContent, config('platform.fallback_locale').'.'.$field);
     }
 }

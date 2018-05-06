@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Events\Systems\Roles;
 
-namespace Orchid\Platform\Events\Systems\Roles;
-
+use App\Models\User;
 use Illuminate\Support\Collection;
-use Orchid\Platform\Core\Models\User;
 use Illuminate\Queue\SerializesModels;
 
 class AddRoleEvent

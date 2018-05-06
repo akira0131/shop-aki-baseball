@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Fields\Types;
 
-namespace Orchid\Platform\Fields\Types;
-
-use Orchid\Platform\Fields\Field;
+use App\Fields\Field;
 
 /**
  * Class TagsField.

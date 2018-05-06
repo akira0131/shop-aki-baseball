@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Listeners\Comment;
 
-namespace Orchid\Platform\Listeners\Comment;
-
-use Orchid\Platform\Http\Forms\Comment\BaseCommentForm;
+use App\Http\Forms\Comment\BaseCommentForm;
 
 class CommentBaseListener
 {

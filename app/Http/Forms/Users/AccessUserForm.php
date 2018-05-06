@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Systems\Users;
 
-namespace Orchid\Platform\Http\Forms\Systems\Users;
-
-use Orchid\Platform\Forms\Form;
+use App\Models\Role;
+use App\Models\User;
+use App\Forms\Form;
+use App\Facades\Dashboard;
 use Illuminate\Contracts\View\View;
-use Orchid\Platform\Core\Models\Role;
-use Orchid\Platform\Core\Models\User;
-use Orchid\Platform\Facades\Dashboard;
 
 class AccessUserForm extends Form
 {

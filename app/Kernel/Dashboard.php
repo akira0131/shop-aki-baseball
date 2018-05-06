@@ -69,7 +69,7 @@ class Dashboard
      */
     public static function prefix($path = '') : string
     {
-        $prefix = config('app.prefix');
+        $prefix = config('platform.prefix');
 
         return $prefix.$path;
     }

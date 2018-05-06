@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Settings;
 
-namespace Orchid\Platform\Http\Forms\Settings;
-
-use Orchid\Platform\Forms\Form;
-use Orchid\Platform\Core\Models\Setting;
+use App\Models\Setting;
+use App\Forms\Form;
 
 class InfoForm extends Form
 {

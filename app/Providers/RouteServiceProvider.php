@@ -8,7 +8,6 @@ use App\Models\Role;
 use App\Models\Category;
 use App\Widget\WidgetContractInterface;
 use App\Http\Middleware\AccessMiddleware;
-
 use Base64Url\Base64Url;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -117,7 +116,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        if (config('app.headless')) {
+        if (config('platform.headless')) {
             return;
         }
 

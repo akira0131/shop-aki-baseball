@@ -24,7 +24,8 @@ return [
     |
     */
 
-    //'domain' => env('DASHBOARD_DOMAIN', dashboard_domain()),
+    'domain' => env('DASHBOARD_DOMAIN', dashboard_domain()),
+    //'domain' => 'localhost',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +41,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Middleware
+    | ルーティングルールの「middleware」
     |--------------------------------------------------------------------------
     |
     | Provide a convenient mechanism for filtering HTTP
@@ -64,7 +65,7 @@ return [
 
     'auth' => [
         'display' => true,
-        'image'   => '/orchid/img/background.jpg',
+        'image'   => '/img/background.jpg',
         'slogan'  => 'dashboard::auth/account.slogan',
     ],
 
@@ -98,20 +99,20 @@ return [
     */
 
     'fields' => [
-        'textarea'     => Orchid\Platform\Fields\Types\TextAreaField::class,
-        'input'        => Orchid\Platform\Fields\Types\InputField::class,
-        'list'         => Orchid\Platform\Fields\Types\ListField::class,
-        'tags'         => Orchid\Platform\Fields\Types\TagsField::class,
-        'select'       => Orchid\Platform\Fields\Types\SelectField::class,
-        'relationship' => Orchid\Platform\Fields\Types\RelationshipField::class,
-        'place'        => Orchid\Platform\Fields\Types\PlaceField::class,
-        'picture'      => Orchid\Platform\Fields\Types\PictureField::class,
-        'datetime'     => Orchid\Platform\Fields\Types\DateTimerField::class,
-        'checkbox'     => Orchid\Platform\Fields\Types\CheckBoxField::class,
-        'code'         => Orchid\Platform\Fields\Types\CodeField::class,
-        'wysiwyg'      => Orchid\Platform\Fields\Types\TinyMCEField::class,
-        'password'     => Orchid\Platform\Fields\Types\PasswordField::class,
-        'markdown'     => Orchid\Platform\Fields\Types\SimpleMDEField::class,
+        'textarea'     => App\Fields\Types\TextAreaField::class,
+        'input'        => App\Fields\Types\InputField::class,
+        'list'         => App\Fields\Types\ListField::class,
+        'tags'         => App\Fields\Types\TagsField::class,
+        'select'       => App\Fields\Types\SelectField::class,
+        'relationship' => App\Fields\Types\RelationshipField::class,
+        'place'        => App\Fields\Types\PlaceField::class,
+        'picture'      => App\Fields\Types\PictureField::class,
+        'datetime'     => App\Fields\Types\DateTimerField::class,
+        'checkbox'     => App\Fields\Types\CheckBoxField::class,
+        'code'         => App\Fields\Types\CodeField::class,
+        'wysiwyg'      => App\Fields\Types\TinyMCEField::class,
+        'password'     => App\Fields\Types\PasswordField::class,
+        'markdown'     => App\Fields\Types\SimpleMDEField::class,
     ],
 
     /*
@@ -147,8 +148,8 @@ return [
     */
 
     'common' => [
-        'user'     => Orchid\Platform\Behaviors\Base\UserBase::class,
-        'category' => Orchid\Platform\Behaviors\Base\CategoryBase::class,
+        'user'     => App\Behaviors\Base\UserBase::class,
+        'category' => App\Behaviors\Base\CategoryBase::class,
     ],
 
     /*
@@ -259,7 +260,7 @@ return [
     */
 
     'main_widgets' => [
-        Orchid\Platform\Http\Widgets\UpdateWidget::class,
+        App\Http\Widgets\UpdateWidget::class,
     ],
 
     /*

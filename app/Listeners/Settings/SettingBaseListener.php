@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Listeners\Settings;
 
-namespace Orchid\Platform\Listeners\Settings;
-
-use Orchid\Platform\Http\Forms\Settings\BaseSettingsForm;
+use App\Http\Forms\Settings\BaseSettingsForm;
 
 class SettingBaseListener
 {

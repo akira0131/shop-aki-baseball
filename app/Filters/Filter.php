@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Orchid\Platform\Filters;
+namespace App\Filters;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;

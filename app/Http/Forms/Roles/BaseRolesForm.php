@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Systems\Roles;
 
-namespace Orchid\Platform\Http\Forms\Systems\Roles;
-
-use Orchid\Platform\Forms\Form;
+use App\Models\Role;
+use App\Forms\Form;
+use App\Facades\Dashboard;
 use Illuminate\Contracts\View\View;
-use Orchid\Platform\Core\Models\Role;
-use Orchid\Platform\Facades\Dashboard;
 
 class BaseRolesForm extends Form
 {

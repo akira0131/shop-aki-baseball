@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use App\Models\User;
 use App\Kernel\Dashboard;
-
 use Illuminate\Console\Command;
 use Illuminate\Database\QueryException;
 

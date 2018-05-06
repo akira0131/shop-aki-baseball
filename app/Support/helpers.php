@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 if (! function_exists('alert')) {
     /**
      * Helper function to send an alert.
@@ -9,7 +7,7 @@ if (! function_exists('alert')) {
      * @param string|null $message
      * @param string      $level
      *
-     * @return \Orchid\Platform\Alert\Alert
+     * @return \App\Alert\Alert
      */
     function alert($message = null, $level = 'info')
     {
@@ -32,7 +30,7 @@ if (! function_exists('setting')) {
      */
     function setting($key, $default = null)
     {
-        return \Orchid\Platform\Facades\Setting::get($key, $default);
+        return \App\Facades\Setting::get($key, $default);
     }
 }
 
@@ -45,15 +43,15 @@ if (! function_exists('generate_form')) {
      * @param string|null $language
      * @param string|null $prefix
      * @return string
-     * @throws \Orchid\Platform\Exceptions\TypeException
+     * @throws \App\Exceptions\TypeException
      */
     function generate_form(array $fields, $data = [], string $language = null, string $prefix = null)
     {
         if (is_array($data)) {
-            $data = new \Orchid\Platform\Screen\Repository($data);
+            $data = new \App\Screen\Repository($data);
         }
 
-        return (new \Orchid\Platform\Fields\Builder($fields, $data, $language, $prefix))->generateForm();
+        return (new \App\Fields\Builder($fields, $data, $language, $prefix))->generateForm();
     }
 }
 

@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
+use App\Facades\Alert;
+use App\Http\Forms\Settings\SettingFormGroup;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Orchid\Platform\Facades\Alert;
 use Illuminate\Support\Facades\Cache;
-use Orchid\Platform\Http\Controllers\Controller;
-use Orchid\Platform\Http\Forms\Settings\SettingFormGroup;
 
 class SettingController extends Controller
 {

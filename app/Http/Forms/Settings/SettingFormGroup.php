@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Forms\Settings;
 
-namespace Orchid\Platform\Http\Forms\Settings;
-
-use Orchid\Platform\Forms\FormGroup;
-use Orchid\Platform\Events\SettingsEvent;
+use App\Forms\FormGroup;
+use App\Events\SettingsEvent;
 
 class SettingFormGroup extends FormGroup
 {

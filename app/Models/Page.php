@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Models;
 
-namespace Orchid\Platform\Core\Models;
-
-use Orchid\Platform\Facades\Dashboard;
-use Orchid\Platform\Exceptions\TypeException;
+use App\Facades\Dashboard;
+use App\Exceptions\TypeException;
 
 class Page extends Post
 {

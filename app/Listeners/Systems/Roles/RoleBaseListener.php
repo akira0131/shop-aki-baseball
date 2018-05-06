@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Listeners\Systems\Roles;
 
-namespace Orchid\Platform\Listeners\Systems\Roles;
-
-use Orchid\Platform\Http\Forms\Systems\Roles\BaseRolesForm;
+use App\Http\Forms\Systems\Roles\BaseRolesForm;
 
 class RoleBaseListener
 {

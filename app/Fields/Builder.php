@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Fields;
 
-namespace Orchid\Platform\Fields;
-
-use Orchid\Platform\Screen\Repository;
+use App\Screen\Repository;
 
 class Builder
 {
@@ -51,7 +49,7 @@ class Builder
      * @param string|null $language
      * @param string|null $prefix
      *
-     * @throws \Orchid\Platform\Exceptions\TypeException
+     * @throws \App\Exceptions\TypeException
      */
     public function __construct(array $fields, Repository $data, string $language = null, string $prefix = null)
     {

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Behaviors\Base;
 
-namespace Orchid\Platform\Behaviors\Base;
-
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Platform\Fields\TD;
-use Orchid\Platform\Http\Filters\RoleFilter;
+use App\Fields\Field;
+use App\Platform\Fields\TD;
+use App\Http\Filters\RoleFilter;
 
 class UserBase
 {
@@ -39,7 +37,7 @@ class UserBase
 
     /**
      * @return array
-     * @throws \Orchid\Platform\Exceptions\TypeException
+     * @throws \App\Exceptions\TypeException
      */
     public function fields() : array
     {

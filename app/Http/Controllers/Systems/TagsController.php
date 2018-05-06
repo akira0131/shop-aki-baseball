@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Controllers\Systems;
 
-namespace Orchid\Platform\Http\Controllers\Systems;
-
-use Orchid\Platform\Core\Models\Post;
-use Orchid\Platform\Http\Controllers\Controller;
+use App\Models\Post;
+use App\Http\Controllers\Controller;
 
 class TagsController extends Controller
 {
