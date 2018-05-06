@@ -1,22 +1,36 @@
-// var elixir = require('laravel-elixir');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+const cache = require('gulp-cached');
+const ejs = require("gulp-ejs");
+const gutil = require('gulp-util');
+const reload = browserSync.reload;
 
-elixir(function(mix) {
-    mix.less('admin-lte/AdminLTE.less', 'public/la-assets/css');
-    mix.less('bootstrap/bootstrap.less', 'public/la-assets/css');
+gulp.task('browser-sync', function () {
+  browserSync({
+    server: {
+      baseDir: './public'
+    },
+    open: 'external'
+  });
 });
 
-/*
-var minify = require('gulp-minify');
-gulp.task('compress', function() {
-  gulp.src('lib/*.js')
-    .pipe(minify({
-        ext:{
-            src:'-debug.js',
-            min:'.js'
-        },
-        exclude: ['tasks'],
-        ignoreFiles: ['.combo.js', '-min.js']
+gulp.task('ejs', function () {
+  return gulp.src(
+    ["./resources/views/**/*.ejs", "!./resources/views/**/_*.ejs"]
+  )
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(ejs({}, {"root": "./resources/views"}, {"ext": ".html"}).on('error', gutil.log))
+    .pipe(gulp.dest("./public"))
 });
-*/
+
+gulp.task('watch', function () {
+  gulp.watch(['./resources/**/*.ejs'], ['ejs', reload]);
+  gulp.watch('./public/css/**').on("change", reload);
+  gulp.watch('./public/js/**').on("change", reload);
+});
+
+gulp.task('default', ['browser-sync', 'watch', 'ejs']);

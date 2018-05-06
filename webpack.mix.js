@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix.copy('./node_modules/font-awesome/fonts/', 'public/fonts')
+   .copy('./node_modules/orchid-icons/src/fonts/', 'public/fonts')
+   .copyDirectory('./node_modules/tinymce', 'public/plugins/tinymce')
+   .js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .sourceMaps()
 
