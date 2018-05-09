@@ -5,12 +5,18 @@ namespace App\Http\Forms\Settings;
 use App\Forms\FormGroup;
 use App\Events\SettingsEvent;
 
+/**
+ * 共通定義
+ *
+ */
 class SettingFormGroup extends FormGroup
 {
     /**
+     * ビューテンプレートへのパス
+     *
      * @var string
      */
-    public $view = 'dashboard::container.systems.settings.settings';
+    public $view = 'dashboard.systems.settings.index';
 
     /**
      * @var
@@ -18,15 +24,18 @@ class SettingFormGroup extends FormGroup
     public $event = SettingsEvent::class;
 
     /**
-     * Description Attributes for group.
+     * 値を設定
      *
      * @return array
      */
     public function attributes() : array
     {
         return [
+            // コンテンツタイトル
             'name'        => trans('dashboard::systems/settings.Settings'),
-            'description' => trans('dashboard::systems/settings.Global system settings'),
+
+            // コンテンツ説明文
+            'description' => trans('dashboard::systems/settings.GlobalSystemSettings'),
         ];
     }
 }

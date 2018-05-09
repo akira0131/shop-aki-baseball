@@ -35,7 +35,7 @@ class UserFormGroup extends FormGroup
         $behavior = config('platform.common.user');
         $behavior = new $behavior;
 
-        return view('dashboard::container.systems.users.grid', [
+        return view('dashboard.systems.users.index', [
             'users'    => User::filtersApply($behavior->filters())->paginate(),
             'behavior' => $behavior,
             'filters'  => collect($behavior->filters()),

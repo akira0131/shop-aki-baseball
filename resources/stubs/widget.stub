@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Orchid\Platform\Widget\Widget;
+use App\Widget\Widget;
 
 class DummyClass extends Widget {
 

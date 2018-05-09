@@ -53,7 +53,7 @@ class BasePostForm extends Form
             return $item;
         });
 
-        return view('dashboard::container.posts.modules.base', [
+        return view('dashboard.posts.modules.container.base', [
             'author'   => (is_null($post)) ? $post : $post->getUser(),
             'post'     => $post,
             'language' => App::getLocale(),

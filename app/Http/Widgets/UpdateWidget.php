@@ -48,7 +48,7 @@ class UpdateWidget extends Widget
             return $this->getStatus();
         });
 
-        return view('dashboard::widgets.update', [
+        return view('partials.widgets.update', [
             'status' => $status,
         ]);
     }

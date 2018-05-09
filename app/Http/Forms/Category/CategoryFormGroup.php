@@ -8,6 +8,10 @@ use App\Events\CategoryEvent;
 
 use Illuminate\View\View;
 
+/**
+ * 共通定義
+ *
+ */
 class CategoryFormGroup extends FormGroup
 {
     /**
@@ -21,14 +25,17 @@ class CategoryFormGroup extends FormGroup
     protected $categoryBehavior;
 
     /**
-     * Description Attributes for group.
+     * 値を設定
      *
      * @return array
      */
     public function attributes(): array
     {
         return [
+            // コンテンツタイトル
             'name'        => trans('dashboard::systems/category.title'),
+            
+            // コンテンツ説明文
             'description' => trans('dashboard::systems/category.description'),
         ];
     }
@@ -41,7 +48,8 @@ class CategoryFormGroup extends FormGroup
         $behavior = config('platform.common.category');
         $behavior = new $behavior;
 
-        return view('dashboard::container.systems.category.grid', [
+        // ビューテンプレートへのパス
+        return view('dashboard.systems.category.index', [
             'category' => Category::filtersApply($behavior->filters())->where('parent_id', 0)->with('allChildrenTerm')->paginate(),
             'behavior' => $behavior,
             'filters'  => collect($behavior->filters()),

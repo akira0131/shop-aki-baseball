@@ -4,7 +4,7 @@ namespace App\Behaviors\Demo;
 
 use App\Fields\Field;
 use App\Behaviors\Many;
-use App\Platform\Fields\TD;
+use App\Fields\TD;
 use App\Http\Filters\SearchFilter;
 use App\Http\Filters\StatusFilter;
 use App\Http\Filters\CreatedFilter;

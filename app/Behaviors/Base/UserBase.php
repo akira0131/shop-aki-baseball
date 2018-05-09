@@ -3,7 +3,7 @@
 namespace App\Behaviors\Base;
 
 use App\Fields\Field;
-use App\Platform\Fields\TD;
+use App\Fields\TD;
 use App\Http\Filters\RoleFilter;
 
 class UserBase

@@ -77,7 +77,7 @@ class AccessUserForm extends Form
             $roles = Role::all();
         }
 
-        return view('dashboard::container.systems.users.access', [
+        return view('dashboard.systems.users.container.access', [
             'permission' => $permission,
             'user'       => $user,
             'roles'      => $roles,

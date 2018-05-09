@@ -7,8 +7,8 @@ return [
     | Headless
     |--------------------------------------------------------------------------
     |
-    | If the dashboard is turned true, then all routes stop working,
-    | this is required if you are building your control panel or you do not need it
+    | GUIのレスポンスは無し（Viewのレンダー無し）で実行し、CUIのレスポンスのみで会話するモード
+    |
     |
     */
 

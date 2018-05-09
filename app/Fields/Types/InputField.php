@@ -41,7 +41,7 @@ class InputField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.input';
+    public $view = 'partials.fields.input';
 
     /**
      * Required Attributes.

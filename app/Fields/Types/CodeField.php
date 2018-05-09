@@ -39,9 +39,11 @@ use App\Fields\Field;
 class CodeField extends Field
 {
     /**
+     * ビューテンプレートへのパス
+     *
      * @var string
      */
-    public $view = 'dashboard::fields.code';
+    public $view = 'partials.fields.code';
 
     /**
      * Required Attributes.

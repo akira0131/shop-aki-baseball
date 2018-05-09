@@ -2,9 +2,9 @@
 
 namespace DummyNamespace;
 
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Behaviors\Single;
-use Orchid\Platform\Http\Forms\Posts\UploadPostForm;
+use App\Fields\Field;
+use App\Behaviors\Single;
+use App\Http\Forms\Posts\UploadPostForm;
 
 class DummyClass extends Single
 {

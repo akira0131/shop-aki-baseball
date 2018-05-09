@@ -2,8 +2,8 @@
 
 namespace DummyNamespace;
 
+use App\Screen\Screen;
 use Illuminate\Http\Request;
-use Orchid\Platform\Screen\Screen;
 
 class DummyClass extends Screen
 {

@@ -2,29 +2,26 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Route;
 use App\Kernel\Dashboard;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 
 class FoundationServiceProvider extends ServiceProvider
 {
     /**
-     * Boot the application events.
+     * アプリケーションサービスの初期化処理
      */
     public function boot()
     {
         $this->app->singleton(Dashboard::class, function () {
             return new Dashboard();
         });
-
         $this->registerEloquentFactoriesFrom(realpath(DASHBOARD_PATH.'/database/factories'));
-
         $this->registerDatabase();
         $this->registerTranslations();
-        //$this->registerConfig();
+        $this->registerConfig();
         $this->registerViews();
-
         $this->registerProviders();
     }
 
@@ -55,21 +52,24 @@ class FoundationServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register config.
+     * 設定ファイルを登録
      */
-    //protected function registerConfig()
-    //{
-    //    $this->publishes([
-    //        realpath(DASHBOARD_PATH.'/config/scout.php')    => config_path('scout.php'),
-    //        realpath(DASHBOARD_PATH.'/config/platform.php') => config_path('platform.php'),
-    //        realpath(DASHBOARD_PATH.'/config/widget.php')   => config_path('widget.php'),
-    //    ]);
-//
-    //    $this->mergeConfigFrom(realpath(DASHBOARD_PATH.'/config/app.php'), 'app');
-    //}
+    protected function registerConfig()
+    {
+        $this->publishes([
+            realpath(DASHBOARD_PATH.'/config/scout.php')    => config_path('scout.php'),
+            realpath(DASHBOARD_PATH.'/config/platform.php') => config_path('platform.php'),
+            realpath(DASHBOARD_PATH.'/config/widget.php')   => config_path('widget.php'),
+        ]);
+
+        $this->mergeConfigFrom(realpath(DASHBOARD_PATH.'/config/app.php'), 'app');
+    }
 
     /**
-     * Register views.
+     * ビューの登録
+     *
+     * Usge:
+     * loadViewsFrom(ビューテンプレートへのパス, パッケージの名前)
      */
     public function registerViews()
     {
@@ -84,21 +84,12 @@ class FoundationServiceProvider extends ServiceProvider
         ]), 'dashboard');
     }
 
+    /**
+     * サービスプロバーダーの登録
+     */
     public function registerProviders()
     {
-        foreach ($this->provides() as $provide) {
-            $this->app->register($provide);
-        }
-    }
-
-    /**
-     * Providerクラスの読み込み
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [
+        $provides = [
             AlertServiceProvider::class,
             WidgetServiceProvider::class,
             DashboardProvider::class,
@@ -106,12 +97,20 @@ class FoundationServiceProvider extends ServiceProvider
             ConsoleServiceProvider::class,
             PermissionServiceProvider::class,
             EventServiceProvider::class,
-            MenuServiceProvider::class,
+            
+            // ビューにオブジェクトを渡すサービスプロバーダー
+            ComposerServiceProvider::class,
         ];
+
+        foreach ($provides as $provide) {
+            $this->app->register($provide);
+        }
     }
 
     /**
-     * Register the service provider.
+     * サービスコンテナへの登録
+     *
+     * @return void
      */
     public function register()
     {

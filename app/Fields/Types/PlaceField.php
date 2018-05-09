@@ -13,7 +13,7 @@ class PlaceField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.place';
+    public $view = 'partials.fields.place';
 
     /**
      * Required Attributes.

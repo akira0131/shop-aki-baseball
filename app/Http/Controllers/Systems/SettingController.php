@@ -24,6 +24,8 @@ class SettingController extends Controller
     public function __construct(SettingFormGroup $form)
     {
         $this->checkPermission('dashboard.systems.settings');
+        
+        // 共通定義の読込み
         $this->form = $form;
     }
 

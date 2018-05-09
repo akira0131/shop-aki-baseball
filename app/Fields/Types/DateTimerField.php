@@ -38,9 +38,11 @@ use App\Fields\Field;
 class DateTimerField extends Field
 {
     /**
+     * ビューテンプレートへのパス
+     *
      * @var string
      */
-    public $view = 'dashboard::fields.datetime';
+    public $view = 'partials.fields.datetime';
 
     /**
      * Default attributes value.

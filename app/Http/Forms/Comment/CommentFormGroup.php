@@ -39,7 +39,7 @@ class CommentFormGroup extends FormGroup
             },
         ])->latest()->paginate();
 
-        return view('dashboard::container.systems.comment.grid', [
+        return view('dashboard.systems.comment.index', [
             'comments' => $comments,
         ]);
     }

@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Orchid\Platform\Layouts\Chart;
+use App\Layouts\Chart;
 
 class DummyClass extends Chart
 {

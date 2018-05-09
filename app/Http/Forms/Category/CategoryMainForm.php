@@ -57,7 +57,7 @@ class CategoryMainForm extends Form
         ]);
         $category = Category::where('id', '!=', $termTaxonomy->id)->get();
 
-        return view('dashboard::container.systems.category.info', [
+        return view('dashboard.systems.category.container.info', [
             'category'     => $category,
             'termTaxonomy' => $termTaxonomy,
         ]);

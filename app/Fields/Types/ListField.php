@@ -13,7 +13,7 @@ class ListField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.list';
+    public $view = 'partials.fields.list';
 
     /**
      * Required Attributes.

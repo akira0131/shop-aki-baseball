@@ -2,12 +2,11 @@
 
 namespace DummyNamespace;
 
-use Orchid\Platform\Fields\Field;
-use Orchid\Platform\Behaviors\Many;
-use Orchid\Platform\Platform\Fields\TD;
-use Orchid\Platform\Http\Forms\Posts\BasePostForm;
-use Orchid\Platform\Http\Forms\Posts\UploadPostForm;
-
+use App\Fields\Field;
+use App\Fields\TD;
+use App\Behaviors\Many;
+use App\Http\Forms\Posts\BasePostForm;
+use App\Http\Forms\Posts\UploadPostForm;
 
 class DummyClass extends Many
 {

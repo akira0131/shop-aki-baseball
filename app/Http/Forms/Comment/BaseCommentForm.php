@@ -31,7 +31,7 @@ class BaseCommentForm extends Form
      */
     public function get(Comment $comment) : View
     {
-        return view('dashboard::container.systems.comment.info', [
+        return view('dashboard.systems.comment.container.info', [
             'comment' => $comment,
             'post'    => $comment->post()->first(),
         ]);
