@@ -41,7 +41,7 @@ class InfoForm extends Form
         $extendSettings = $this->model->get('base', collect());
         $settings = $settings->merge($extendSettings);
 
-        return view('dashboard::container.systems.settings.info', [
+        return view('dashboard.systems.settings.container.info', [
             'settings' => $settings,
         ]);
     }

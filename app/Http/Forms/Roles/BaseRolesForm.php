@@ -69,7 +69,7 @@ class BaseRolesForm extends Form
             $permission = Dashboard::getPermission();
         }
 
-        return view('dashboard::container.systems.roles.info', [
+        return view('dashboard.systems.roles.container.info', [
             'permission' => $permission,
             'role'       => $role,
         ]);

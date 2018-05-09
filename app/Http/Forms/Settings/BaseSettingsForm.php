@@ -49,7 +49,7 @@ class BaseSettingsForm extends Form
             'site_email',
         ], []);
 
-        return view('dashboard::container.systems.settings.base', $settings);
+        return view('dashboard.systems.settings.container.base', $settings);
     }
 
     /**

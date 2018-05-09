@@ -4,7 +4,7 @@ namespace App\Behaviors;
 
 use Illuminate\View\View;
 use Illuminate\Support\Collection;
-use App\Core\Models\Post;
+use App\Models\Post;
 
 abstract class Many
 {

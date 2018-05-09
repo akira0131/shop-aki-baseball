@@ -24,6 +24,8 @@ class CategoryController extends Controller
     public function __construct(CategoryFormGroup $form)
     {
         $this->checkPermission('dashboard.systems.category');
+        
+        // 共通定義の読込み
         $this->form = $form;
     }
 

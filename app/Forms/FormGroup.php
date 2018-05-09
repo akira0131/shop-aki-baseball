@@ -28,11 +28,11 @@ abstract class FormGroup
     public $group;
 
     /**
-     * View template form.
+     * // ビューテンプレートへのパス
      *
      * @var
      */
-    public $view = 'dashboard::layouts.form.group';
+    public $view = 'dashboard.systems.category.edit';
 
     /**
      * @var

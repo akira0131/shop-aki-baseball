@@ -13,7 +13,7 @@ class CacheController
      */
     public function index()
     {
-        return view('dashboard::container.systems.cache.index');
+        return view('dashboard.systems.cache.index');
     }
 
     /**

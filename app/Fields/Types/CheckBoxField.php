@@ -39,9 +39,11 @@ use App\Fields\Field;
 class CheckBoxField extends Field
 {
     /**
+     * ビューテンプレートへのパス
+     *
      * @var string
      */
-    public $view = 'dashboard::fields.checkbox';
+    public $view = 'partials.fields.checkbox';
 
     /**
      * Required Attributes.

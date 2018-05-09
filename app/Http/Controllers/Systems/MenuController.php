@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Systems;
 
 use App\Models\Menu;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\App;
@@ -40,7 +39,7 @@ class MenuController extends Controller
             return redirect()->route('dashboard.systems.menu.show', $menu->keys()->first());
         }
 
-        return view('dashboard::container.systems.menu.listing', [
+        return view('dashboard.systems.menu.index', [
             'menu' => collect(config('platform.menu')),
         ]);
     }
@@ -62,7 +61,7 @@ class MenuController extends Controller
             ->with('children')
             ->get();
 
-        return view('dashboard::container.systems.menu.menu', [
+        return view('dashboard.systems.menu.show', [
             'nameMenu'      => $nameMenu,
             'locales'       => config('platform.locales'),
             'currentLocale' => $currentLocale,

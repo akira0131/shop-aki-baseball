@@ -1,6 +1,9 @@
+# .gitignore
+
 /node_modules
 /public/hot
 /public/storage
+/public/vendor
 /storage/*.key
 /resources/assets/vendor
 /vendor/*

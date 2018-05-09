@@ -41,7 +41,7 @@ class TinyMCEField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.tinymce';
+    public $view = 'partials.fields.tinymce';
 
     /**
      * Required Attributes.

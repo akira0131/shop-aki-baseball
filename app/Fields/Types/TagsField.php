@@ -41,7 +41,7 @@ class TagsField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.tags';
+    public $view = 'partials.fields.tags';
 
     /**
      * Required Attributes.

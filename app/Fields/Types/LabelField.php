@@ -13,7 +13,7 @@ class LabelField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.label';
+    public $view = 'partials.fields.label';
 
     /**
      * Required Attributes.

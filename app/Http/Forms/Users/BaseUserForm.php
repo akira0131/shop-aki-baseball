@@ -56,7 +56,7 @@ class BaseUserForm extends Form
      */
     public function get(User $user = null) : View
     {
-        return view('dashboard::container.systems.users.info', [
+        return view('dashboard.systems.users.container.info', [
             'user'     => $user ?: new $this->model(),
             'language' => App::getLocale(),
             'locales'  => config('platform.locales'),

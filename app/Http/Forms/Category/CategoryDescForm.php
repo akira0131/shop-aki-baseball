@@ -4,7 +4,6 @@ namespace App\Http\Forms\Category;
 
 use App\Forms\Form;
 use App\Models\Taxonomy;
-
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\App;
@@ -63,7 +62,7 @@ class CategoryDescForm extends Form
             'id' => 0,
         ]);
 
-        return view('dashboard::container.systems.category.desc', [
+        return view('dashboard.systems.category.container.desc', [
             'language'     => App::getLocale(),
             'termTaxonomy' => $termTaxonomy,
             'locales'      => collect(config('platform.locales')),

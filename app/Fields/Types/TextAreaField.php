@@ -26,7 +26,7 @@ class TextAreaField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.textarea';
+    public $view = 'partials.fields.textarea';
 
     /**
      * Required Attributes.

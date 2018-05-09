@@ -39,7 +39,7 @@ class PasswordField extends Field
     /**
      * @var string
      */
-    public $view = 'dashboard::fields.password';
+    public $view = 'partials.fields.password';
 
     /**
      * Required Attributes.

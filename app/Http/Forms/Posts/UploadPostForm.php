@@ -44,7 +44,7 @@ class UploadPostForm extends Form
      */
     public function get() : View
     {
-        return view('dashboard::container.posts.modules.upload', ['storage' => $this->storage, 'mime' => $this->mime]);
+        return view('dashboard.posts.modules.container.upload', ['storage' => $this->storage, 'mime' => $this->mime]);
     }
 
     /**

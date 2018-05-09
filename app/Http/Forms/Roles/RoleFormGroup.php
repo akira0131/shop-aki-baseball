@@ -35,7 +35,7 @@ class RoleFormGroup extends FormGroup
         $role = new Role();
         $roles = $role->select('name', 'slug', 'created_at')->paginate();
 
-        return view('dashboard::container.systems.roles.grid', [
+        return view('dashboard.systems.roles.index', [
             'roles' => $roles,
         ]);
     }
