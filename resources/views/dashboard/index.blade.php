@@ -27,7 +27,7 @@ controller:
 @endsection
 
 {{-- Js --}}
-@section('js')
+@push('js')
 <script>
     var activeMenu = false;
     $('#aside-wrap-list').children('.tab-pane').each(function () {
@@ -39,4 +39,4 @@ controller:
         $('#menu-notifications').addClass('active')
     }
 </script>
-@endsection
+@endpush

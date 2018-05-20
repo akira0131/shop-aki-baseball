@@ -100,6 +100,9 @@ class FoundationServiceProvider extends ServiceProvider
             
             // ビューにオブジェクトを渡すサービスプロバーダー
             ComposerServiceProvider::class,
+
+            // Bladeディレクティブを拡張するサービスプロバーダー
+            BladeServiceProvider::class,
         ];
 
         foreach ($provides as $provide) {

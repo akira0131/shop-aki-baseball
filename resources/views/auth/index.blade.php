@@ -18,7 +18,7 @@ controller: Auth\LoginController@showLoginForm
                    class="form-control" required
                    value="{{ old('email') }}">
 
-            {{-- 入力エラーだった場合にメッセージを表示 --}}
+            {{-- バリデーションチェック※入力エラーの場合はエラーメッセージを表示 --}}
             @if($errors->has('email'))
             <span class="form-text text-muted">
                 <strong>{{ $errors->first('email') }}</strong>
@@ -34,7 +34,7 @@ controller: Auth\LoginController@showLoginForm
             <input type="password" class="form-control" name="password"
                    placeholder="{{trans('dashboard::auth/account.enter_password')}}" required>
 
-            {{-- 入力エラーだった場合にメッセージを表示 --}}
+            {{-- バリデーションチェック※入力エラーの場合はエラーメッセージを表示 --}}
             @if($errors->has('password'))
             <span class="form-text text-muted">
                 <strong>{{ $errors->first('password') }}</strong>

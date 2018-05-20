@@ -3,7 +3,7 @@
 <html lang="{{ App::getLocale() }}">
 
 {{-- HTML HEADER --}}
-@component('partials.elements.html_header')
+@component('partials.components.htmlHeader')
     @slot('layouts', 'auth')
 @endcomponent
 <body>
@@ -76,6 +76,6 @@
     </div>
 
     {{-- Js --}}
-    @include('partials.elements.js')
+    @include('partials.components.js')
 </body>
 </html>

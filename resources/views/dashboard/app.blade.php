@@ -3,7 +3,7 @@
 <html lang="{{ App::getLocale() }}">
 
 {{-- HTML HEADER --}}
-@component('partials.elements.html_header')
+@component('partials.components.htmlHeader')
     @slot('layouts', 'dashboard')
 @endcomponent
 
@@ -45,15 +45,15 @@
 
                 {{--  --}}
                 @if(count($errors) > 0)
-                    <div class="alert alert-danger m-b-none" role="alert">
-                        <strong>Oh snap!</strong>
-                        Change a few things up and try submitting again.
-                        <ul class="m-t-xs">
-                            @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+                <div class="alert alert-danger m-b-none" role="alert">
+                    <strong>Oh snap!</strong>
+                    Change a few things up and try submitting again.
+                    <ul class="m-t-xs">
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
                 @endif
 
                 {{-- コンテンツ --}}
@@ -63,6 +63,6 @@
     </div>
 
     {{-- Js --}}
-    @include('partials.elements.js')
+    @include('partials.components.js')
 </body>
 </html>

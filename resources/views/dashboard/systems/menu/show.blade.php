@@ -199,7 +199,7 @@ controller: Systems\MenuController@show
                     <div class="dd" data-lang="{{ $currentLocale }}" data-name="{{ $nameMenu }}">
                         <ol class="dd-list">
 
-                            @include('dashboard::container.systems.menu.item',[
+                            @include('dashboard::dashboard.systems.menu.container.item',[
                                 'menu'=>$menu
                             ])
                         </ol>
